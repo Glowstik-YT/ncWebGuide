@@ -1,0 +1,66 @@
+.introCard{
+  width: 600px;
+  height: 300px;
+  background-color: #141414;
+  color: #ffffff;
+  border-radius: 25px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.introTitle{
+  padding-left: 1rem;
+  padding-top: 1rem;
+}
+
+.introText{
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.introFooter{
+  font-size: 15px;
+}
+.getStartedButton{
+  background-color: #5865F2;
+  border: 3px solid #5865F2;
+  border-radius: 15px;
+  height: 3rem;
+  width: 9rem;
+  font-size: 19px;
+  padding: 5px;
+  color: #fff;
+  margin-bottom: 1rem;
+  transition: ease 0.7s;
+  margin-left: 0.8rem;
+}
+
+.getStartedButton:hover{
+  background-color: #404EED;
+  border: 3px solid #404EED;
+  border-radius: 7px;
+  transition: ease 0.7s;
+  cursor: pointer;
+}
+
+.sourceCodeButton{
+  background-color: #454d53;
+  border: 3px solid #454d53;
+  border-radius: 15px;
+  height: 3rem;
+  width: 9rem;
+  font-size: 19px;
+  padding: 5px;
+  color: #fff;
+  margin-bottom: 1rem;
+  transition: ease 0.7s;
+  margin-left: 0.8rem;
+}
+
+.sourceCodeButton:hover{
+  background-color: #32373b;
+  border: 3px solid #32373b;
+  border-radius: 7px;
+  transition: ease 0.7s;
+  cursor: pointer;
+}

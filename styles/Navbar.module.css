@@ -1,0 +1,33 @@
+
+@keyframes slideInAnimation {
+    0% {
+        margin-left: -1rem;
+    }
+    100% {
+        margin-left: 1rem;
+    }
+}
+
+.sideBar{
+    float: left;
+    border-radius: 15px;
+    min-height: wrap;
+    padding: 1rem;
+    background-color: #141414;
+    color: #fff;
+    transition: ease 0.5s;
+    animation: slideInAnimation ease 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.sideList {
+    list-style-type: none; 
+    padding: 0;
+    margin: 0; 
+}
+
+.sepList:hover {
+    color: #404EED;
+    transition: ease 0.5s;
+}

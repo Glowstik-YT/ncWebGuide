@@ -1,0 +1,43 @@
+.decorator {
+    color: #e5b567;
+}
+  
+.async {
+    color: red;
+}
+
+.def {
+    color: cyan;
+}
+
+.arg {
+    color: orange;
+}
+
+.importPackageName {
+    color: #b4d273;
+}
+
+.import {
+    color: red;
+}
+
+.comment {
+    color: #8f8f8f;
+}
+
+.int {
+    /*
+    add the color for ints
+    */
+}
+
+.str {
+    /* 
+    add the color for string
+    */
+}
+
+.class {
+    color: lime
+}
