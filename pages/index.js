@@ -19,7 +19,7 @@ export default function Home() {
           The Unofficial Nextcord Web Guide
         </h1>
         <p className={styles.introText}> 
-          So you wanna create a discord bot? Click the get started button below to start your journey! 
+          So you wanna create a Discord Bot? Click the get started button below to start your journey! 
         </p>
         <Link href="/setting-up">
           <button className={styles.getStartedButton}>
