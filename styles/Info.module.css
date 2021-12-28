@@ -55,3 +55,39 @@
     cursor: pointer;
 
 }
+
+/* Warnings stuff */
+
+.warnTitle {
+    width: 100;
+    background: #edba00;
+    padding: 3px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.warnContent {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+}
+
+.warnCard {
+    width: 400px;
+    height: wrap;
+    background-color: #141414;
+    color: #fff;
+    border-radius: 15px;
+    margin-right: 1rem;
+    position: absolute;
+    z-index: 2;
+    top: 50;
+    right: 0;
+    margin-right: 5rem;
+    transition: ease 0.7s;
+    animation: slideInAnimation ease 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}

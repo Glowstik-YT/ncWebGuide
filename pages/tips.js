@@ -1,4 +1,4 @@
-import styles from "../styles/Commands.module.css";
+import styles from "../styles/Info.module.css";
 import React, { useState } from 'react';
 import {Animated} from "react-animated-css";
 

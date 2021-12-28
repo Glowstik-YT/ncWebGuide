@@ -38,9 +38,10 @@ export default function Commands() {
                 <CreateTip title="Decorators" content='Decorators have a special feature allowing us to enter args into them. The description and name args are very popular for decorators because they can be used in more complex help commands to let the user know more about the command.' />
                 <h3>How?</h3>
                 <p>
+                    {/* Instead of saying "there is something called @bot.command()"", mention the commands extension */}
                     So in Nextcord, there is something called <code className={CodeStyles.inline}>@bot.command()</code>, 
                     its a decorator that lets the library know that the code below makes a command, below it we have to create an <code className={CodeStyles.inline}>async </code> function.
-                    This function should take in at least one required parameter called <code className={CodeStyles.inline}>ctx</code> which is an instance of <Link href="https://nextcord.readthedocs.io/en/latest/ext/commands/api.html#nextcord.ext.commands.Context"><a className={styles.docLink}> <strong>Commands.context</strong></a></Link>
+                    This function should take in at least one required parameter called <code className={CodeStyles.inline}>ctx:commands.Context</code> which is an instance of <Link href="https://nextcord.readthedocs.io/en/latest/ext/commands/api.html#nextcord.ext.commands.Context"><a className={styles.docLink}> <strong>Commands.context</strong></a></Link>
                     . After this you can add whatever <code className={CodeStyles.inline}>arguments</code> you want, followed by their <code className={CodeStyles.inline}>type</code>.
                     Inside of the function you can handle this however you would like.
                 </p>
