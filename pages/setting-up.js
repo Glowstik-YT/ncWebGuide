@@ -1,10 +1,18 @@
 import Link from "next/link"
 import NavBar from "./navbar"
 import styles from "../styles/SettingUp.module.css"
+import Head from "next/head";
 
 export default function SettingUp() {
     return (
         <div className={styles.container}>
+            <Head>
+                <title>The Unofficial Nextcord Web Guide</title>
+                <meta
+                name="description"
+                content="The Unofficial Nextcord Web Guide is a collection of tutorials and guides for Nextcordv2"
+                />
+            </Head>
             <NavBar />
             <div className={styles.settingUpCard}>
                 <h1>Setting Up</h1>

@@ -25,7 +25,11 @@
 .sideList {
     list-style-type: none; 
     padding: 0;
-    margin: 0; 
+    margin: 0;
+}
+
+.sepList{
+    padding: 0.3rem;
 }
 
 .sepList:hover {
