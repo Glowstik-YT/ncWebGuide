@@ -1,10 +1,12 @@
 import styles from '../styles/Home.module.css'
 import Link from "next/link";
 import Head from "next/head";
+import NavBar from "./navbar";
 
 export default function Home() {
   return (
     <div className={styles.container}>
+      <NavBar />
       <Head>
         <title>The Unofficial Nextcord Web Guide</title>
         <meta
