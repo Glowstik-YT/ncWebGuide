@@ -12,6 +12,7 @@
     margin-right: auto;
     margin-top: 1rem;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    display:block; 
 }
 
 .docLink {
