@@ -26,7 +26,7 @@ export default function SettingUp() {
                         </p>
 
                         <p>
-                            Alright, making a bot is cool and all, but there are some prerequisites to it. To create a bot with nextcord, you should have a fairly decent grasp of Python itself. While you can make a bot with very little Python and programming knowledge, trying to do so without understanding the language first will only hinder you. You may get stuck on many uncomplicated issues, struggle with solutions to incredibly easy problems, and all-in-all end up frustrated. Sounds pretty annoying. {/* Taken from DiscordJS ^*/}
+                            Alright, making a bot is cool and all, but there are some prerequisites to it. To create a bot with Nextcord, you should have a fairly decent grasp of Python itself. While you can make a bot with very little Python and programming knowledge, trying to do so without understanding the language first will only hinder you. You may get stuck on many uncomplicated issues, struggle with solutions to incredibly easy problems, and all-in-all end up frustrated. Sounds pretty annoying. {/* Taken from DiscordJS ^*/}
                         </p>
                     </li>
                     <li>
