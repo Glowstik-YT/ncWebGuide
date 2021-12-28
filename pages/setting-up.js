@@ -51,11 +51,11 @@ export default function SettingUp() {
                                 </a>
                             </Link>
                         </p>
-                        Nextcord v2 is a forked from Discord.py 2.0 Alpha, which does not support anything earlier than Python 3.8
+                        Nextcord v2 is a forked from Discord.py 2.0 Alpha, which does not support anything earlier than Python 3.8.
                     </li>
                     <li>
                         <p>
-                            Have a good knowledge of asynchronous programming
+                            Have a good knowledge of asynchronous programming.
                         </p>
                     </li>
                 </ol>

@@ -21,7 +21,7 @@ export default function SettingUp() {
                 <h2>Installing Required Dependencies</h2>
                 <CreateWarning title="Possible Errors" content="If an error occurs, you may need to update your version of python to the latest version. " />
                 <p>
-                    In order to create a bot with nextcord, you first need to install nextcord. To do so, you can use the following command in your terminal:
+                    In order to create a bot with Nextcord, you first need to install Nextcord. To do so, you can use the following command in your terminal:
                 </p>
                 <CopyBlock
                     text='pip install -U nextcord'
