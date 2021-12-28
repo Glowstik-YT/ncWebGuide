@@ -1,5 +1,14 @@
+@keyframes slideInAnimation {
+    0% {
+        margin-right: -45rem;
+    }
+    100% {
+        margin-right: 5rem;
+    }
+}
+
 .commandsCard{
-    width: 600px;
+    width: 800px;
     height: wrap;
     padding-left: 1rem;
     padding-right: 1rem;
@@ -11,8 +20,68 @@
     margin-left: auto;
     margin-right: auto;
     margin-top: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    z-index: 1;
 }
 
 .docLink {
     color: #404EED;
+}
+
+.tipTitle {
+    width: 100;
+    background: #32cd32;
+    padding: 3px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.tipContent {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+}
+
+.tipCard {
+    width: 400px;
+    height: wrap;
+    background-color: #141414;
+    color: #fff;
+    border-radius: 15px;
+    margin-right: 1rem;
+    position: absolute;
+    z-index: 2;
+    top: 50;
+    right: 0;
+    margin-right: 5rem;
+    transition: ease 0.7s;
+    animation: slideInAnimation ease 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.closeTipButton{
+    background-color: #ED4245;
+    border: 3px solid #ED4245;
+    border-radius: 15px;
+    height: 3rem;
+    width: 9rem;
+    font-size: 19px;
+    padding: 5px;
+    color: #fff;
+    transition: ease 0.7s;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+}
+
+.closeTipButton:hover{
+    background-color: #f5272a;
+    border: 3px solid #f5272a;
+    border-radius: 7px;
+    transition: ease 0.7s;
+    cursor: pointer;
+
 }

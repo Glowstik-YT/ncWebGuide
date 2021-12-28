@@ -26,12 +26,12 @@ export default function SettingUp() {
                             <Link href="https://discord.com/developers/applications">
                                 <a className={styles.docLink}>
                                     <strong>
-                                        Create a Discord Bot App
+                                        Create a Discord Bot App 
                                     </strong>
                                 </a>
                             </Link>
-                            You're gonna need this bot to get the token to interact with the Discord API and see it's effects.
                         </p>
+                        You're gonna need this bot to get the token to interact with the Discord API and see it's effects.
                     </li>
                     <li>
                         <p>

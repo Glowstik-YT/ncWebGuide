@@ -1,7 +1,7 @@
 
 @keyframes slideInAnimation {
     0% {
-        margin-left: -1rem;
+        margin-left: -45rem;
     }
     100% {
         margin-left: 1rem;
@@ -19,6 +19,7 @@
     animation: slideInAnimation ease 2s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
+    z-index: 0;
 }
 
 .sideList {
