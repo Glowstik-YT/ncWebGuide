@@ -19,13 +19,13 @@ export default function SettingUp() {
             <div className={styles.gettingStartedCard}>
                 <h1>Getting Started Part 2</h1>
                 <h2>Installing Required Dependencies</h2>
-                <CreateWarning title="Possible Errors" content="If an error occurs, you may need to update your version of python to the latest version. " />
+                <CreateWarning title="Possible Errors" content="If an error occurs, you may need to update your version of python to the latest version. "/>
                 <p>
                     In order to create a bot with Nextcord, you first need to install Nextcord. To do so, you can use the following command in your terminal:
                 </p>
                 <CopyBlock
                     text='pip install -U nextcord'
-                    language='python'
+                    language='shell'
                     showLineNumbers='true'
                     wrapLines
                     theme={monokaiSublime}
