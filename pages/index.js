@@ -19,7 +19,7 @@ export default function Home() {
         <p className={styles.introText}> 
           So you wanna create a discord bot? Click the get started button below to start your journey! 
         </p>
-        <Link href="/getting-started">
+        <Link href="/setting-up">
           <button className={styles.getStartedButton}>
             <strong>Get Started</strong>
           </button>

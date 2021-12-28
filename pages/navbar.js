@@ -6,6 +6,7 @@ export default function NavBar()  {
         <div className={styles.sideBar}>
 
             <ul className={styles.sideList}>
+                <h2 className={styles.sideListTitle}>NavBar</h2>
                 <li className={styles.sepList}>
                     <Link href="/">
                         Home

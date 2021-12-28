@@ -8,6 +8,11 @@
     }
 }
 
+.sideListTitle{
+    color: #404EED;
+    margin-bottom: -0.17rem;
+}
+
 .sideBar{
     float: left;
     border-radius: 15px;

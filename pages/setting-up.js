@@ -15,7 +15,7 @@ export default function SettingUp() {
             </Head>
             <NavBar />
             <div className={styles.settingUpCard}>
-                <h1>Setting Up</h1>
+                <h1>Getting Started Part 1</h1>
                 <p>
                     Before you can start using Nextcord, you should complete everything on the list below.
                 </p>
@@ -32,7 +32,7 @@ export default function SettingUp() {
                     <li>
                         <p>
                             <Link href="https://discord.com/developers/applications">
-                                <a className={styles.docLink}>
+                                <a className={styles.docLink} target="_blank">
                                     <strong>
                                         Create a Discord Bot App 
                                     </strong>
@@ -43,9 +43,15 @@ export default function SettingUp() {
                     </li>
                     <li>
                         <p>
-                           Python 3.8 or higher
+                            <Link href="https://www.python.org/downloads/">
+                                <a className={styles.docLink} target="_blank">
+                                    <strong>
+                                        Python 3.8 or higher
+                                    </strong>
+                                </a>
+                            </Link>
                         </p>
-                        Nextcord doesn't support anything below this.
+                        Nextcord v2 is a forked from Discord.py 2.0 Alpha, which does not support anything earlier than Python 3.8
                     </li>
                     <li>
                         <p>
@@ -53,6 +59,19 @@ export default function SettingUp() {
                         </p>
                     </li>
                 </ol>
+
+                <div className={styles.buttonSwitch}>
+                    <Link href="./getting-started">
+                        <button className={styles.nextButton}>
+                            <strong>Getting Started P2</strong>
+                        </button>
+                    </Link>
+                    <Link href="/">
+                        <button className={styles.backButton}>
+                            <strong>Go Home</strong>
+                        </button>
+                    </Link>
+                </div>
             </div>
         </div>
     )

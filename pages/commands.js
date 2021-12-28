@@ -68,8 +68,8 @@ export default function Commands() {
                 </div>
                 <h3>Analizing the Example</h3>
                 <p>
-                    In the advanced example above, the bot grabs the member argument and then refences the discord api to find the join date of that user, once the join date is found, the bot sends that messsage to the channel
-                </p>gi
+                    In the advanced example above, the bot grabs the member argument and then refences the discord api to find the join date of that user, once the join date is found, the bot sends that messsage to the channel.
+                </p>
                 <div className={styles.buttonSwitch}>
                     <Link href="./events">
                         <button className={styles.nextButton}>
@@ -86,7 +86,3 @@ export default function Commands() {
         </div>
     )
 }
-
-{/* <code>
-    <code className={CodeStyles.import}>from</code> <code className={CodeStyles.importPackageName}>nextcord</code>.ext <code className={CodeStyles.import}>import </code><code className={CodeStyles.importPackageName}>commands</code>
-</code> */}
