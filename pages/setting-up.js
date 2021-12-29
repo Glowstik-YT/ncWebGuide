@@ -2,6 +2,7 @@ import Link from "next/link"
 import NavBar from "./navbar"
 import styles from "../styles/SettingUp.module.css"
 import Head from "next/head";
+import Image from 'next/image'
 
 export default function SettingUp() {
     return (
@@ -39,7 +40,8 @@ export default function SettingUp() {
                                 </a>
                             </Link>
                         </p>
-                        You're gonna need this bot to get the token to interact with the Discord API and see it's effects.
+                        <Image src="https://media.giphy.com/media/HabWJqEMcdH5F8ULz2/giphy-downsized-large.gif" width="640" height="360"></Image>
+                        <p>You're gonna need this bot to get the token to interact with the Discord API and see it's effects.</p>
                     </li>
                     <li>
                         <p>

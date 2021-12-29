@@ -25,6 +25,9 @@
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
     z-index: 0;
+    overflow: hidden;
+    display: block;
+    position: fixed;
 }
 
 .sideList {

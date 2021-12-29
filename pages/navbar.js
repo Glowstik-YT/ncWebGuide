@@ -18,7 +18,7 @@ export default function NavBar()  {
                     </Link>
                 </li>
                 <li className={styles.sepList}>
-                    <Link href="/getting-starting">
+                    <Link href="/getting-started">
                         Getting Started
                     </Link>
                 </li>
