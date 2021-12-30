@@ -5,6 +5,7 @@ import CodeStyles from "../styles/CodeBlock.module.css";
 import { CopyBlock, monokaiSublime } from "react-code-blocks";
 import React, { useState } from 'react';
 import CreateTip from "./tips";
+import CreateWarning from "./warning";
 import Head from "next/head";
 import Image from 'next/image'
 import info from "../styles/Info.module.css";
@@ -135,6 +136,92 @@ export default function Commands() {
                 <p>This is a very simple command group/help command, you can use <Link href="./views"><a className={styles.docLink}><strong>Views</strong></a></Link> to make it more complext and better!</p>
                 <p>A more complex help command which we will be making in <Link href="./help-commands"><a className={styles.docLink}><strong>How to make Custom Help Commands</strong></a></Link> would look something like this:</p>
                 <Image src="https://cdn.upload.systems/uploads/OGsLF4yL.png" height="320" width="440"/ >
+                <h2>Command Permissions</h2>
+                <p>Many of the moderation commands if not all should check if the user has the correct permissions to run the command. If a user that just joined the server can ban people, that isnt the <em>greatest</em> look for your bot. Thats why we have <Link href="https://nextcord.readthedocs.io/en/latest/api.html#nextcord.Permissions"><a className={styles.docLink}><strong>Commands.permissions</strong></a></Link>, thats just one of the many permissions we will be working with today!</p>
+                <h3>has_permissions</h3>
+                <p>This is the most popular decorator for checking if a user has permissions, its very simple to use and is perfect for checking peoples permissions.</p>
+                <div className={info.warnCard}>
+                    <div>
+                        <div className={info.warnTitle}>
+                            <h2>
+                                <strong>
+                                    Possible Errors
+                                </strong>
+                            </h2>
+                        </div>
+                        <div className={info.warnContent}>
+                            <p>
+                                If a user who does not have sufficient permissions to run the command runs, the commands decorator will invoke an error. This error is <code className={CodeStyles.inline}>commands.MissingPermissions</code> which is inherited from <code className={CodeStyles.inline}>commands.CheckFailure</code>. In order to resolve this error you will require <Link href="./help-commands"><a className={styles.docLink}><strong>Error Handling.</strong></a></Link>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <CopyBlock
+                    text={`@commands.has_permissions("manage_guild=True") 
+#This accepts mutliple optional arguments`}
+                    language='python'
+                    showLineNumbers='true'
+                    wrapLines
+                    theme={monokaiSublime}
+                    codeBlock='false'
+                />
+                <p>You would put this under your <code className={CodeStyles.inline}>@bot.command</code>.</p>
+                <h3>has_guild_permissions</h3>
+                <p>This is very similar to <code className={CodeStyles.inline}>has_permissions</code> although instead of checking permissions of the channel that the command is invoked, the bot instead checks the guid wide permissions of the user.</p>
+                <CopyBlock
+                    text={`@commands.has_guild_permissions("manage_messages=True") 
+#This accepts mutliple optional arguments`}
+                    language='python'
+                    showLineNumbers='true'
+                    wrapLines
+                    theme={monokaiSublime}
+                    codeBlock='false'
+                />
+                <p>You would put this under your <code className={CodeStyles.inline}>@bot.command</code>.</p>
+                <h3>is_owner</h3>
+                <p>This is mainly used for owner only commands, it's usually used for commands that impact the bot itself, for example if you want to restart the bot. If there are mutliple developers on your bot then it will apply to them all.</p>
+                <CopyBlock
+                    text={`@commands.is_owner()`}
+                    language='python'
+                    showLineNumbers='true'
+                    wrapLines
+                    theme={monokaiSublime}
+                    codeBlock='false'
+                />
+                <p>The decorator takes in no arguments and is just <em>there</em>.</p>
+                <h3>has_role</h3>
+                <p>This decorator is very similar to <code className={CodeStyles.inline}>@has_permissions</code>, it takes in the argument of a role which can be entered in the form of an ID or Name.</p>
+                <CopyBlock
+                    text={`@commands.has_role("Admin")`}
+                    language='python'
+                    showLineNumbers='true'
+                    wrapLines
+                    theme={monokaiSublime}
+                    codeBlock='false'
+                />
+                <p>Only if you have a role named Admin, will you be able to run the command.</p>
+                <CreateWarning title="Possible Error" content="If you are planning on making a multi-server/public bot, it is suggested to just use the permissions decorator instead"/>
+                <CopyBlock
+                    text={`@commands.has_role(794743540675903528)`}
+                    language='python'
+                    showLineNumbers='true'
+                    wrapLines
+                    theme={monokaiSublime}
+                    codeBlock='false'
+                />
+                <p>Using ID is more accurate (incase your change the role name) although, ID will only work for one server whilst Name might work with many servers</p>
+                <h3>has_any_role</h3>
+                <p>This decorator is very similar to <code className={CodeStyles.inline}>@has_role</code>, it takes in the argument of a role which can be entered in the form of an ID or Name, but this time it checks if the user has any of the roles specified.</p>
+                <CopyBlock
+                    text={`@commands.has_role(794743540675903528, 794743521864581150)
+#This accepts mutliple optional arguments`}
+                    language='python'
+                    showLineNumbers='true'
+                    wrapLines
+                    theme={monokaiSublime}
+                    codeBlock='false'
+                />
+                <p>You can use both ID and Name, just for demonstration I used ID for the example.</p>
                 <div className={styles.buttonSwitch}>
                     <Link href="./events">
                         <button className={styles.nextButton}>
