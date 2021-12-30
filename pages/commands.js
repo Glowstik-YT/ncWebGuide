@@ -6,6 +6,8 @@ import { CopyBlock, monokaiSublime } from "react-code-blocks";
 import React, { useState } from 'react';
 import CreateTip from "./tips";
 import Head from "next/head";
+import Image from 'next/image'
+import info from "../styles/Info.module.css";
 
 const basicExampleCommand = `@bot.command()
 async def example(ctx):
@@ -15,6 +17,16 @@ async def example(ctx):
 const advancedExampleCommand = `@bot.command()
 async def joined(ctx, member: nextcord.Member):
     await ctx.send(f"{member.name} joined in {member.joined_at}")
+`
+
+const exampleGroupCommand = `@bot.group(invoke_without_command=True)
+async def help(ctx : commands.Context):
+    await ctx.send("This is a help command")
+`
+
+const exampleModGroupCommand = `@help.command()
+async def moderation(ctx : commands.Context):
+    await ctx.send("This is the moderation part of a help command")
 `
 
 export default function Commands() {
@@ -74,6 +86,55 @@ export default function Commands() {
                 </p>
                 <h2>Command Groups</h2>
                 <p>Sometimes you may have a command which has other commands branching out of it, for example, help commands are very common with this feature. <code className={CodeStyles.inline}>!help moderation</code> might be one of the commands you need for your bot, and the best way to do this is using command groups.</p>
+                <div className={info.warnCard}>
+                    <div>
+                        <div className={info.warnTitle}>
+                            <h2>
+                                <strong>
+                                    Help Command Removal
+                                </strong>
+                            </h2>
+                        </div>
+                        <div className={info.warnContent}>
+                            <p>
+                            When running this code, you may encounter a error message saying <code className={CodeStyles.inline}>The command help is already an existing command or alias.</code> This is because the help command is already a default command by nextcord command, and we can't have two commands with the same name. To fix this, we have to first remove the help command before we make our own. More on this in <Link href="./help-commands"><a className={styles.docLink}><strong>How to make Custom Help Commands</strong></a></Link>.
+                            </p>
+                            <CopyBlock
+                                text='bot.remove_command("help")'
+                                language='python'
+                                showLineNumbers='true'
+                                wrapLines
+                                theme={monokaiSublime}
+                                codeBlock='false'
+                            />
+                        </div>
+                    </div>
+                </div>
+                <CopyBlock
+                    text={exampleGroupCommand}
+                    language='python'
+                    showLineNumbers='true'
+                    wrapLines
+                    theme={monokaiSublime}
+                    codeBlock='false'
+                />
+                <p>After you create a group command, you can then add on too the groups easily.</p>
+
+                <CopyBlock
+                    text={exampleModGroupCommand}
+                    language='python'
+                    showLineNumbers='true'
+                    wrapLines
+                    theme={monokaiSublime}
+                    codeBlock='false'
+                />
+                <div>
+                    <Image src="https://cdn.upload.systems/uploads/048IodDS.png" height="180" width="300"/>
+                    <Image src="https://cdn.upload.systems/uploads/tqBWWVvw.png" height="180" width="350"/>
+                </div>
+                <p>This is a very simple command group/help command, you can use <Link href="./views"><a className={styles.docLink}><strong>Views</strong></a></Link> to make it more complext and better!</p>
+                <p>A more complex help command which we will be making in <Link href="./help-commands"><a className={styles.docLink}><strong>How to make Custom Help Commands</strong></a></Link> would look something like this:</p>
+                <Image src="https://cdn.upload.systems/uploads/OGsLF4yL.png" height="320" width="440"/ >
                 <div className={styles.buttonSwitch}>
                     <Link href="./events">
                         <button className={styles.nextButton}>
