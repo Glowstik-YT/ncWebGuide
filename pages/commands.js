@@ -42,7 +42,7 @@ export default function Commands() {
                     {/* But we're not using the commands extension, unless that's what @bot.command uses idk */}
                     So in Nextcord, there is something called the commands extension which has something called <code className={CodeStyles.inline}>@bot.command()</code>,
                     its a decorator that lets the library know that the code below makes a command, below it we have to create an <code className={CodeStyles.inline}>async </code> function.
-                    This function should take in at least one required parameter called <code className={CodeStyles.inline}>ctx:commands.Context</code> which is an instance of <Link href="https://nextcord.readthedocs.io/en/latest/ext/commands/api.html#nextcord.ext.commands.Context"><a className={styles.docLink}> <strong>Commands.context</strong></a></Link>
+                    This function should take in at least one required parameter called <code className={CodeStyles.inline}>ctx:commands.Context</code> which is an instance of <Link href="https://nextcord.readthedocs.io/en/latest/ext/commands/api.html#nextcord.ext.commands.Context"><a className={styles.docLink} target="_blank"> <strong>Commands.context</strong></a></Link>
                     . After this you can add whatever <code className={CodeStyles.inline}>arguments</code> you want, followed by their <code className={CodeStyles.inline}>type</code>.
                     Inside of the function you can handle this however you would like.
                 </p>
@@ -72,6 +72,8 @@ export default function Commands() {
                 <p>
                     In the advanced example above, the bot grabs the member argument and then references the Discord API to find the join date of that user, once the join date is found, the bot sends that message to the channel.
                 </p>
+                <h2>Command Groups</h2>
+                <p>Sometimes you may have a command which has other commands branching out of it, for example, help commands are very common with this feature. <code className={CodeStyles.inline}>!help moderation</code> might be one of the commands you need for your bot, and the best way to do this is using command groups.</p>
                 <div className={styles.buttonSwitch}>
                     <Link href="./events">
                         <button className={styles.nextButton}>

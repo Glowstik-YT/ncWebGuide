@@ -5,6 +5,7 @@ import Head from "next/head";
 import { CopyBlock, monokaiSublime } from "react-code-blocks";
 import CreateWarning from "./warning";
 import CodeStyles from "../styles/CodeBlock.module.css";
+import info from "../styles/Info.module.css";
 
 const importsCode = `from nextcord.ext import commands
 import nextcord
@@ -15,7 +16,7 @@ async def on_ready():
 `
 
 const pingCommandCode = `@bot.command(name="ping", description="Shows the bot's latency")
-async def ping(ctx:commands.Context):
+async def ping(ctx : commands.Context):
     await ctx.send(f"Pong 🏓 {round(bot.latency * 1000)}ms")
 `
 
@@ -77,7 +78,7 @@ export default function SettingUp() {
                     theme={monokaiSublime}
                     codeBlock='false'
                 />
-                <p>More on the creation of commands in <Link href="./commands"><a className={styles.docLink}><strong>How to make Commands</strong></a></Link> </p>
+                
                 <h3>Creating Commands</h3>
                 <p>The first of many commands we will make is the ping command, it is a regular command almost every bot has and it helps check the latency and speed of the bot.</p>
                 <CopyBlock
@@ -88,6 +89,34 @@ export default function SettingUp() {
                     theme={monokaiSublime}
                     codeBlock='false'
                 />
+                <p>More on the creation of commands in <Link href="./commands"><a className={styles.docLink}><strong>How to make Commands</strong></a></Link> </p>
+                <h3>Managing Our Tokens</h3>
+                <div className={info.warnCard}>
+                    <div>
+                        <div className={info.warnTitle}>
+                            <h2>
+                                <strong>
+                                    Token Storage
+                                </strong>
+                            </h2>
+                        </div>
+                        <div className={info.warnContent}>
+                            <p>
+                            This isn't the most secure way to store your token, check out <Link href="./token-storage"><a className={styles.docLink}><strong>Secure Token Storage</strong></a></Link> for more information.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <p>This is the final and most important step of creating a discord bot, your bot token is required to run your bot; the token lets the Discord API know what bot is being run. If your token gets leaked or compromised whoever has the token is able to then control your bot and use it to damage such as raiding servers.</p>
+                <CopyBlock
+                    text='bot.run(token="TOKEN")'
+                    language='python'
+                    showLineNumbers='true'
+                    wrapLines
+                    theme={monokaiSublime}
+                    codeBlock='false'
+                />
+
                 <div className={styles.buttonSwitch}>
                     <Link href="./commands">
                         <button className={styles.nextButton}>

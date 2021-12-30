@@ -11,19 +11,18 @@ export default function CreateWarning({title, content}){
         <div>
             <div className={styles.warnCard}>
                 <div>
-                <div className={styles.warnTitle}>
-                    <h2>
-                        <strong>
-                            {title}
-                        </strong>
-                    </h2>
-                </div>
-                <div className={styles.warnContent}>
-                    <p>
-                        {content}
-                    </p>
-                </div>
-                <button className={styles.closeTipButton} onClick={hideMe}>Close Warning</button>
+                    <div className={styles.warnTitle}>
+                        <h2>
+                            <strong>
+                                {title}
+                            </strong>
+                        </h2>
+                    </div>
+                    <div className={styles.warnContent}>
+                        <p>
+                            {content}
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
