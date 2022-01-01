@@ -3,6 +3,7 @@ import NavBar from "./navbar"
 import styles from "../styles/SettingUp.module.css"
 import Head from "next/head";
 import Image from 'next/image'
+import CodeStyles from "../styles/CodeBlock.module.css";
 
 export default function SettingUp() {
     return (
@@ -59,6 +60,12 @@ export default function SettingUp() {
                         <p>
                             Have a good knowledge of asynchronous programming.
                         </p>
+                    </li>
+                    <li>
+                        <p>
+                            Have a python file to develop the bot on.
+                        </p>
+                        For the sake of this guide and conistancy, we will be using a file named <code className={CodeStyles.inline}>main.py</code>, but this file can be namedwhatever you want it to be... just dont get crazy with it
                     </li>
                 </ol>
 

@@ -5,7 +5,6 @@ import CodeStyles from "../styles/CodeBlock.module.css";
 import { CopyBlock, monokaiSublime } from "react-code-blocks";
 import React, { useState } from 'react';
 import CreateTip from "./tips";
-import CreateWarning from "./warning";
 import Head from "next/head";
 
 const onMessageExample = `@bot.event
