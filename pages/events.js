@@ -8,14 +8,21 @@ import CreateTip from "./tips";
 import CreateWarning from "./warning";
 import Head from "next/head";
 
-const onMessageExample = `async def on_message(message):
+const onMessageExample = `@bot.event
+async def on_message(message):
     if message.author.id == 744715959817994371:
         await message.channel.send("Hello, glowstik!")
 `
 
-const onGuidJoinExample = `async def on_guild_join(guild):
+const onGuidJoinExample = `@bot.event
+async def on_guild_join(guild):
     channel = guild.channel
     await channel.send("Helloooo, I'm a new bot added to the server!")
+`
+
+const onMemberJoinExample = `@bot.event
+async def on_member_join(member):
+    await member.send(f"Hi, {member.name}! Welcome to the server!")
 `
 
 export default function Commands() {
@@ -56,6 +63,16 @@ export default function Commands() {
                 />
                 <p>This will find the first channel in the guild and send a message telling members the bot has joined.</p>
                 <h3>on_member_join</h3>
+                <p>When a new member joins a channel, the bot will run the event. Here you can have the bot do various things such as a welcome message, or if you may need to update a db with the users data so other commands can be executed.</p>
+                <CopyBlock
+                    text={onMemberJoinExample}
+                    language='python'
+                    showLineNumbers='true'
+                    wrapLines
+                    theme={monokaiSublime}
+                    codeBlock='false'
+                />
+                <p>This simpily will send a message to the new member saying hello and welcoming them to the server.</p>
                 <div className={styles.buttonSwitch}>
                     <Link href="./cogs">
                         <button className={styles.nextButton}>
