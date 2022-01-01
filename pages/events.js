@@ -92,7 +92,7 @@ export default function Commands() {
                 <div className={styles.buttonSwitch}>
                     <Link href="./cogs">
                         <button className={styles.nextButton}>
-                            Nextcord Events
+                            Cogs
                         </button>
                     </Link>
                     <Link href="./commands">

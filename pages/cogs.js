@@ -5,6 +5,7 @@ import Navbar from "./navbar"
 import CodeStyles from "../styles/CodeBlock.module.css";
 import info from "../styles/Info.module.css";
 import CreateWarning from "./warning";
+import Link from "next/link"
 
 const loadingCogs = `import os
 
@@ -130,6 +131,18 @@ export default function Cogs() {
                     theme={monokaiSublime}
                     codeBlock='false'
                 />
+                <div className={styles.buttonSwitch}>
+                    <Link href="./events">
+                        <button className={styles.nextButton}>
+                            Error Handling
+                        </button>
+                    </Link>
+                    <Link href="./events">
+                        <button className={styles.backButton}>
+                            Go Back
+                        </button>
+                    </Link>
+                </div>
             </div>
             
         </div>

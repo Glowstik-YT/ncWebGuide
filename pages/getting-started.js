@@ -120,12 +120,12 @@ export default function SettingUp() {
                 <div className={styles.buttonSwitch}>
                     <Link href="./commands">
                         <button className={styles.nextButton}>
-                            <strong>Nextcord Commands</strong>
+                            Nextcord Commands
                         </button>
                     </Link>
                     <Link href="/setting-up">
                         <button className={styles.backButton}>
-                            <strong>Go Back</strong>
+                            Go Back
                         </button>
                     </Link>
                 </div>
