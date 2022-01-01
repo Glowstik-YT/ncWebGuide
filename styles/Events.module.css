@@ -1,0 +1,110 @@
+.commandsCard{
+    width: 800px;
+    height: wrap;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+    padding-top: 0.4rem;
+    background-color: #141414;
+    color: #fff;
+    border-radius: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    z-index: 1;
+    transition: ease 0.7s;
+    margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 1350px) {
+    .commandsCard{
+        width: 550px;
+        height: wrap;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-bottom: 1rem;
+        padding-top: 0.4rem;
+        background-color: #141414;
+        color: #fff;
+        border-radius: 25px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 1rem;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        z-index: 1;
+        transition: ease 0.7s;
+        margin-bottom: 1rem;
+    }    
+}
+
+@media screen and (max-width: 1550px) {
+    .commandsCard{
+        width: 700px;
+        height: wrap;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-bottom: 1rem;
+        padding-top: 0.4rem;
+        background-color: #141414;
+        color: #fff;
+        border-radius: 25px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 1rem;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        z-index: 1;
+        transition: ease 0.7s;
+        margin-bottom: 1rem;
+    }    
+}
+
+.buttonSwitch{
+    margin-top: 1rem;
+}
+
+.nextButton{
+    background-color: #5865F2;
+    border: 3px solid #5865F2;
+    border-radius: 15px;
+    height: 3rem;
+    width: 11rem;
+    font-size: 19px;
+    padding: 5px;
+    color: #fff;
+    transition: ease 0.7s;
+    margin-right: 1rem;
+}
+
+.nextButton:hover{
+    background-color: #404EED;
+    border: 3px solid #404EED;
+    border-radius: 7px;
+    transition: ease 0.7s;
+    cursor: pointer;
+}
+
+.backButton{
+    background-color: #454d53;
+    border: 3px solid #454d53;
+    border-radius: 15px;
+    height: 3rem;
+    width: 9rem;
+    font-size: 19px;
+    padding: 5px;
+    color: #fff;
+    transition: ease 0.7s;
+    margin-right: 1rem;
+}
+
+.backButton:hover{
+    background-color: #32373b;
+    border: 3px solid #32373b;  
+    border-radius: 7px;
+    transition: ease 0.7s;
+    cursor: pointer;
+}
+
+.docLink {
+    color: #404EED;
+}
