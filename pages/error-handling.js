@@ -19,6 +19,9 @@ export default function Cogs() {
             </Head>
             <div className={styles.card}>
                 <h1>Error Handling</h1>
+                <p>Being able to handle errors is a big part of creating a discord bot, it ensures your bot will still work even if not everything goes to plan. Thats why nextcord has two ways to handle errors, per-command error handling and global error handling. Global error handling is a lot more popular as it is automatically applied to every command and is a quick way to do it. Although if you need specific error handling for certain commands, per-command error handling is probably the better option.</p>
+                <h3>Global Error Handling</h3>
+                
                 <div className={styles.buttonSwitch}>
                     <Link href="./events">
                         <button className={styles.nextButton}>
