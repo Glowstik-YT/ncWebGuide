@@ -34,7 +34,12 @@ export default function NavBar()  {
                 </li>
                 <li className={styles.sepList}>
                     <Link href="/cogs">
-                        Cogs
+                        Adding Cogs
+                    </Link>
+                </li>
+                <li className={styles.sepList}>
+                    <Link href="/error-handling">
+                        Error Handling
                     </Link>
                 </li>
                 <li className={styles.sepList}>

@@ -23,13 +23,13 @@ export default function Home() {
         </p>
         <Link href="/setting-up">
           <button className={styles.getStartedButton}>
-            <strong>Get Started</strong>
+            Get Started
           </button>
         </Link>
         <Link href="https://github.com/Glowstik-YT/glowNextcordTutorial">
           <a target="_blank">
             <button className={styles.sourceCodeButton}>
-              <strong>Source Code</strong>  
+              Source Code  
             </button>
           </a>
         </Link>

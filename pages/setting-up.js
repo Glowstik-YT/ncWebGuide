@@ -72,12 +72,12 @@ export default function SettingUp() {
                 <div className={styles.buttonSwitch}>
                     <Link href="./getting-started">
                         <button className={styles.nextButton}>
-                            <strong>Getting Started P2</strong>
+                            Getting Started P2
                         </button>
                     </Link>
                     <Link href="/">
                         <button className={styles.backButton}>
-                            <strong>Go Home</strong>
+                            Go Home
                         </button>
                     </Link>
                 </div>
