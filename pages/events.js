@@ -25,6 +25,12 @@ async def on_member_join(member):
     await member.send(f"Hi, {member.name}! Welcome to the server!")
 `
 
+const onMessageListenerExample = `@bot.listen()
+async def on_message(message):
+    if message.author.id == 744715959817994371:
+    await message.channel.send("Hello, glowstik!")
+`
+
 export default function Commands() {
     return (
         <div>
@@ -73,6 +79,17 @@ export default function Commands() {
                     codeBlock='false'
                 />
                 <p>This simpily will send a message to the new member saying hello and welcoming them to the server.</p>
+                <h2>Listeners</h2>
+                <p>Listeners are very similar to events, although they can be used more than once across multiple files, they are ussually used in <Link href="./cogs"><a className={styles.docLink}><strong>cogs</strong></a></Link>, so you can have multiple listeners for each cog.</p>
+                <CopyBlock
+                    text={onMessageListenerExample}
+                    language='python'
+                    showLineNumbers='true'
+                    wrapLines
+                    theme={monokaiSublime}
+                    codeBlock='false'
+                />
+                <p>As you can see, not much changes in the way its made, and it has the same functionality.</p>
                 <div className={styles.buttonSwitch}>
                     <Link href="./cogs">
                         <button className={styles.nextButton}>
