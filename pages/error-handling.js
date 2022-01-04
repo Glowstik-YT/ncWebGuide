@@ -1,11 +1,18 @@
 import { CopyBlock, monokaiSublime } from "react-code-blocks";
-import styles from "../styles/Cogs.module.css";
+import styles from "../styles/ErrorHandling.module.css";
 import Head from "next/head"
 import Navbar from "./navbar"
 import CodeStyles from "../styles/CodeBlock.module.css";
 import info from "../styles/Info.module.css";
 import CreateWarning from "./warning";
 import Link from "next/link"
+
+const commandErrorExample = `@ban.error
+async def ban_error(ctx: commands.Context, error: commands.CommandError):
+    if isinstance(error, commands.MissingPermissions):
+        await ctx.send("The ban_member permission is required to use this command.")
+        return
+`
 
 const globalErrorExample = `@bot.event
 async def on_command_error(ctx: commands.Context, error: commands.CommandError):
@@ -21,7 +28,7 @@ const commandOnCooldownExample = `elif isinstance(error, commands.MissingPermiss
 `
 
 const missingPermissionsExample = `elif isinstance(error, commands.MissingPermissions):
-    await ctx.send(f"You are missing the following permissions: {error.missing_perms}")
+    await ctx.send("You are missing the permissions required to run this command.")
 `
 
 export default function Cogs() {
@@ -66,13 +73,32 @@ export default function Cogs() {
                     theme={monokaiSublime}
                     codeBlock='false'
                 />
+                <p></p>
+                <CopyBlock
+                    text={missingPermissionsExample}
+                    language='python'
+                    showLineNumbers='true'
+                    wrapLines
+                    theme={monokaiSublime}
+                    codeBlock='false'
+                />
+                <h3>Per-Command Error Handling</h3>
+                <p>Per Command is a tad bit different from the global error handler, we use a custom decorator to detect which command it is. Everything else after that is the same such as the if statements for handling the error. For demonstration purposes, lets suppose we already have a command called <code className={CodeStyles.inline}>ban</code>, which will ban whatever member you ping. We will build a permissions error handler to ensure that no one without the ban permission can run the command.</p>
+                <CopyBlock
+                    text={commandErrorExample}
+                    language='python'
+                    showLineNumbers='true'
+                    wrapLines
+                    theme={monokaiSublime}
+                    codeBlock='false'
+                />
                 <div className={styles.buttonSwitch}>
-                    <Link href="./events">
+                    <Link href="./views">
                         <button className={styles.nextButton}>
-                            Error Handling
+                            Views
                         </button>
                     </Link>
-                    <Link href="./events">
+                    <Link href="./cogs">
                         <button className={styles.backButton}>
                             Go Back
                         </button>
