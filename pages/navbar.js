@@ -43,6 +43,11 @@ export default function NavBar()  {
                     </Link>
                 </li>
                 <li className={styles.sepList}>
+                    <Link href="/views">
+                        Views
+                    </Link>
+                </li>
+                <li className={styles.sepList}>
                     <Link href="/faq">
                         FaQs
                     </Link>
