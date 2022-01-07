@@ -122,7 +122,7 @@ export default function Cogs() {
                 />
                 </div>
                 <p>Its suggested to keep this in your <code className={CodeStyles.inline}>main.py</code> file so you can't disable your disable command...</p>
-                <p>For enabling its pretty much the samething, but instead of unloading the cog, we will be loading it!</p>
+                <p>For enabling its pretty much the same thing, but instead of unloading the cog, we will be loading it!</p>
                 <CopyBlock
                     text={disablingCogs}
                     language='python'
