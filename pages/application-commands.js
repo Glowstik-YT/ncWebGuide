@@ -1,24 +1,20 @@
 import { CopyBlock, monokaiSublime } from "react-code-blocks";
-import styles from "../styles/SlashCommands.module.css"
+import styles from "../styles/ApplicationCommands.module.css"
 import Navbar from "./navbar"
+import CodeStyles from "../styles/CodeBlock.module.css";
 
-
-const basicSlashCommand = `from nextcord import Client, Interaction, SlashOption, ChannelType
+// this code is inspired from https://github.com/nextcord/nextcord/blob/master/examples/application_commands/slash_basic.py
+const basicSlashCommand = `from nextcord import Client, Interaction, SlashOption, ChannelType #your going too need to import these new imports for slash commands to work
 from nextcord.abc import GuildChannel
+from nextcord.ext import commands
 
+TESTING_GUILD_ID = 123456789 #set this to the guild you want to test the command in
 
-# Replace the number here with the ID of your testing guild/server.
-TESTING_GUILD_ID = 123456789
-
-
-# While slash commands work with Bot from ext.commands, this is a basic slash example and thus, we use Client.
-client = Client()
-
+bot = commands.Bot(command_prefix='!') #here we are creating a bot with the command prefix of ! (this is basic stuff)
 
 @client.event
-async def on_ready():
+async def on_ready(): #creating an event that will run when the bot is ready just to notify the dev (us)
     print("Slash template is up and running!")
-
 
 # If you don't specify a list of guild_ids, it will be a global command. While global commands are available in every
 # guild the bot is in (and has command permissions), they can take up to an hour before people will be able to use them.
@@ -26,11 +22,8 @@ async def on_ready():
 @client.slash_command(guild_ids=[TESTING_GUILD_ID])
 async def example1(interaction: Interaction):
     # This is an example of a very basic slash command.
-    await interaction.response.send_message(
-        "Output from the first example slash command!"
-    )
-
-` // Sourced from the examples folder from nextcord/nextcord
+    await interaction.response.send_message("Output from the first example slash command!")
+`
 
 const basicSlashCommandWithArgs = `# Using the code from the last example, but with arguments.
 
@@ -45,9 +38,7 @@ async def example2_command(interaction: Interaction, arg1, arg2: int):
     # 2: description= sets the description that users will see for this command.
     # 3: arg1 was added, defaults to a string response.
     # 4: arg2 was added and typed as an int, meaning that users will only be able to give ints.
-    await interaction.response.send_message(
-        f"Second slash command, arg1: {arg1}, arg2: {arg2}"
-    )
+    await interaction.response.send_message(f"Second slash command, arg1: {arg1}, arg2: {arg2}")
 `
 
 const basicSlashCommandWithSlashOptions = `# Using code from first example, but with SlashOptions.
@@ -111,10 +102,8 @@ export default function slashCommands() {
                 <h1>Slash Commands</h1>
                 <p>
                     Slash Commands! Discord's newest way for commands to be added to the bot. This is a very simple way to add commands to the bot, and it benefits off of the Discord Client's interface so you don't need to worry about people supply the wrong argument types, people using the wrong prefix, people using invalid commands, all because Discord handles that for you!
-                    Now, you can't just magically create these commands, you need to use the <code>@bot.slash_command</code>. Let me show you.
+                    Now, you can't just magically create these commands, you need to use the <code className={CodeStyles.inline}>@bot.slash_command</code>. Let me show you.
                 </p>
-            </div>
-            <div className={styles.card}>
                 <CopyBlock
                     text={basicSlashCommand}
                     language='python'
@@ -126,8 +115,6 @@ export default function slashCommands() {
                 <p>
                     This is a very basic slash command. It's very simple, and it's very easy to use.
                 </p>
-            </div>
-            <div className={styles.card}>
                 <CopyBlock
                     text={basicSlashCommandWithArgs}
                     language='python'
@@ -139,8 +126,6 @@ export default function slashCommands() {
             <p>
                 This is a very basic slash command with arguments. It's very simple.
             </p>
-            </div>
-            <div className={styles.card}>
                 <CopyBlock
                     text={basicSlashCommandWithSlashOptions}
                     language='python'
@@ -152,8 +137,6 @@ export default function slashCommands() {
                 <p>
                     Now this is a little complex, but still quite simple to follow and expand on.
                 </p>
-            </div>
-            <div className={styles.card}>
                 <CopyBlock
                     text={basicSlashCommandsWithSlashOptionsAndChoices}
                     language='python'
