@@ -50,6 +50,42 @@ else:
     return
 `
 
+const selectsClassExample = `class NumSelect(nextcord.ui.View): #the nextcord.ui.View is what we will use to create the selects
+    def __init__(self): #this is to initialize the class and set the properties
+        super().__init__()
+`
+
+const selectDecoratorExample = `@nextcord.ui.select(
+    placeholder="Choose your help page",
+    min_values=1,
+    max_values=1,
+    options=[
+        nextcord.SelectOption(
+            label="Option 1", description="This is the first option you can click", emoji="1️⃣"
+        ),
+        nextcord.SelectOption(
+            label="Option 2", description="This is the second option you can click", emoji="2️⃣"
+        ),
+    ],
+)
+`
+
+const selectFunctionExample = `async def num_callback(self, select, interaction: nextcord.Interaction):
+    if interaction.user.id != self.user.id: #here we are checking if the user is the same as the author, if not then it will send a message to the user telling them they can not use the selects
+        return await interaction.response.send_message('Only the user who invoked the command can use the selects', ephemeral=True)
+    select.placeholder = f"{select.values[0]} Selected" #here we are changing the select placeholder to the number that was selected
+    if select.values[0] == "Option 1":
+        await interaction.response.send_message("You selected option 1", view=self) #here, when option 1 is selected, we are sending a message letting the user know that option 1 is selected
+    if select.values[0] == "Option 2":
+        await interaction.response.send_message("You selected option 2", view=self)
+`
+
+const selectCommandExample = `@bot.command()
+async def number(ctx: commands.Context):
+    view = NumSelect() #here we are creating a varible called view and setting it to the NumSelect class
+    await ctx.send('Choose a number', view=view) #we are adding another parameter to this send command, the view, which is the selects class we created earlier
+`
+
 export default function Cogs() {
     return (
         <div>
@@ -123,6 +159,43 @@ export default function Cogs() {
                 />
                 <p>Now we can run the command and see the buttons pop up!</p>
                 <h2>Selects</h2>
+                <p>Selects are like dropdown menus in discord, you are able to select something from the menu to do. They are like buttons but a bit simpilar to make and are good for lists. Creating selects is also pretty similar to buttons, we will create a selects class to house all of our select code in. Then we can call that select inside the command.</p>
+                <CopyBlock
+                    text={selectsClassExample}
+                    language='python'
+                    showLineNumbers='true'
+                    wrapLines
+                    theme={monokaiSublime}
+                    codeBlock='false'
+                />
+                <p>Now that we have a selects class, we can now use the decorator and create the select. The decorator is where we will house all of the select options, and then under it we can create the function that will manage the selects.</p>
+                <CopyBlock
+                    text={selectDecoratorExample}
+                    language='python'
+                    showLineNumbers='true'
+                    wrapLines
+                    theme={monokaiSublime}
+                    codeBlock='false'
+                />
+                <p>Now that the decorator is made we can now create the function which will send a message with whatever button is clicked, for example if the first select is clicked, then the number 1 will be sent in chat and vice versa.</p>
+                <CopyBlock
+                    text={selectFunctionExample}
+                    language='python'
+                    showLineNumbers='true'
+                    wrapLines
+                    theme={monokaiSublime}
+                    codeBlock='false'
+                />
+                <p>This can be repeated as many times as there are needed and it is the same proccess everytime. Lastly we want to add it too the command which is pretty easy and the same as buttons.</p>
+                <CopyBlock
+                    text={selectCommandExample}
+                    language='python'
+                    showLineNumbers='true'
+                    wrapLines
+                    theme={monokaiSublime}
+                    codeBlock='false'
+                />
+                <p>And thats it! We just created buttons and selects!</p>
                 <div className={styles.buttonSwitch}>
                     <Link href="./views">
                         <button className={styles.nextButton}>
