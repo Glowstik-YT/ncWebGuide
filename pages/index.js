@@ -26,7 +26,7 @@ export default function Home() {
             Get Started
           </button>
         </Link>
-        <Link href="https://github.com/Glowstik-YT/glowNextcordTutorial">
+        <Link href="https://github.com/Glowstik-YT/ncWebGuide">
           <a target="_blank">
             <button className={styles.sourceCodeButton}>
               Source Code  
@@ -35,7 +35,7 @@ export default function Home() {
         </Link>
         <center>
           <p className={styles.introFooter}>
-              Made with love by Glowstik_#5127 and The Untraceable#4852❤️ 
+              Made with ❤️ by Glowstik_#5127 and The Untraceable#4852 
           </p>
         </center>
       </div>
