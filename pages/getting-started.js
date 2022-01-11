@@ -6,6 +6,7 @@ import { CopyBlock, monokaiSublime } from "react-code-blocks";
 import CreateWarning from "./warning";
 import CodeStyles from "../styles/CodeBlock.module.css";
 import info from "../styles/Info.module.css";
+import ReactPlayer from 'react-player';
 
 const importsCode = `from nextcord.ext import commands
 import nextcord
@@ -116,7 +117,12 @@ export default function SettingUp() {
                     theme={monokaiSublime}
                     codeBlock='false'
                 />
-
+                <p></p>
+                <center>
+                    <div>
+                        <ReactPlayer url="https://www.youtube.com/watch?v=e9SYmj1QF8I" />
+                    </div>
+                </center>
                 <div className={styles.buttonSwitch}>
                     <Link href="./commands">
                         <button className={styles.nextButton}>

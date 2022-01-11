@@ -21,7 +21,14 @@
 
 .introFooter{
   font-size: 15px;
+  transition: ease 0.4s;
 }
+
+.introFooter:hover{
+  color: #abafe2;
+  transition: ease 0.4s;
+}
+
 .getStartedButton{
   background-color: #5865F2;
   border: 3px solid #5865F2;

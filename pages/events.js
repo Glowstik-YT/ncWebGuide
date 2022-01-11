@@ -30,7 +30,7 @@ async def on_message(message):
     await message.channel.send("Hello, glowstik!")
 `
 
-export default function Commands() {
+export default function Events() {
     return (
         <div>
             <Head>

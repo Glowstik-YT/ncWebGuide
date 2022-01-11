@@ -6,6 +6,7 @@ import CodeStyles from "../styles/CodeBlock.module.css";
 import info from "../styles/Info.module.css";
 import CreateWarning from "./warning";
 import Link from "next/link"
+import ReactPlayer from 'react-player';
 
 const loadingCogs = `import os
 
@@ -50,10 +51,6 @@ async def load(ctx, extension):
 `
 
 export default function Cogs() {
-
-
-
-
     return (
         <div>
             <Navbar />

@@ -3,6 +3,8 @@ import styles from "../styles/ApplicationCommands.module.css"
 import Navbar from "./navbar"
 import CodeStyles from "../styles/CodeBlock.module.css";
 import Link from "next/link"
+import CreateWarning from "./warning";
+import ReactPlayer from "react-player";
 
 // this code is inspired from https://github.com/nextcord/nextcord/blob/master/examples/application_commands/slash_basic.py
 const basicSlashCommand = `from nextcord import Client, Interaction, SlashOption, ChannelType #your going too need to import these new imports for slash commands to work
@@ -76,7 +78,7 @@ export default function slashCommands() {
                     Now, you can't just magically create these commands, you need to use the <code className={CodeStyles.inline}>@bot.slash_command</code>. Let me show you.
                 </p>
                 <p>Examples inspired from <Link href="https://github.com/nextcord/nextcord/blob/master/examples/application_commands/slash_basic.py"><a className={styles.docLink} target="_blank"> <strong>slash_basic.py</strong></a></Link></p>
-                
+                <CreateWarning title="Interaction Error" content="You may encounter an interaction error from discord whilst creating views, this can be resolved by simply restarting your bot and rerunning your command, if the error persists then it may be a problem with an incompatable library." />
                 <CopyBlock
                     text={basicSlashCommand}
                     language='python'
@@ -107,6 +109,12 @@ export default function slashCommands() {
                     theme={monokaiSublime}
                     codeBlock='false'
                 />
+                <p></p>
+                <center>
+                    <div>
+                        <ReactPlayer url="https://www.youtube.com/watch?v=yCZMhkSQjCE" />
+                    </div>
+                </center>
                 <div className={styles.buttonSwitch}>
                     <Link href="./faq">
                         <button className={styles.nextButton}>

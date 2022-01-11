@@ -4,6 +4,7 @@ import styles from "../styles/SettingUp.module.css"
 import Head from "next/head";
 import Image from 'next/image'
 import CodeStyles from "../styles/CodeBlock.module.css";
+import ReactPlayer from 'react-player';
 
 export default function SettingUp() {
     return (
@@ -68,7 +69,9 @@ export default function SettingUp() {
                         For the sake of this guide and conistancy, we will be using a file named <code className={CodeStyles.inline}>main.py</code>, but this file can be namedwhatever you want it to be... just dont get crazy with it
                     </li>
                 </ol>
-
+                <center>
+                    <ReactPlayer url="https://www.youtube.com/watch?v=e9SYmj1QF8I" />
+                </center>
                 <div className={styles.buttonSwitch}>
                     <Link href="./getting-started">
                         <button className={styles.nextButton}>

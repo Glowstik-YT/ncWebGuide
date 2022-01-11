@@ -9,6 +9,7 @@ import CreateWarning from "./warning";
 import Head from "next/head";
 import Image from 'next/image'
 import info from "../styles/Info.module.css";
+import ReactPlayer from 'react-player';
 
 const basicExampleCommand = `@bot.command()
 async def example(ctx):
@@ -70,6 +71,7 @@ export default function Commands() {
                     codeBlock='false'
                     />
                 </div>
+                <CreateTip title="Slash Commands" content="Discords message intent is limiting verified bots to not be able to access the message content unless they are provided the intent, if you plan on verifying your bot, you may need to use slash commands or get the intent." />
                 <h3>Advanced Example</h3>
                 <div>
                     <CopyBlock

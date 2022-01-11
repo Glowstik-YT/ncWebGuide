@@ -6,6 +6,7 @@ import CodeStyles from "../styles/CodeBlock.module.css";
 import info from "../styles/Info.module.css";
 import CreateWarning from "./warning";
 import Link from "next/link"
+import ReactPlayer from "react-player";
 
 const buttonsClassExample = `class ButtonsCheck(nextcord.ui.View): #the nextcord.ui.View is what we will use to create the buttons
     def __init__(self): #this is to initialize the class and set the properties
@@ -102,6 +103,7 @@ export default function Cogs() {
                 <p>Views contain discords newer interactions such as buttons and selects, these can be used to do a variety of tasks from help commands to litteral games. This is a fairly new feature as it came out in Discord.py v2 Alpha, but it still works as expected and is super easy to use.</p>
                 <h2>Buttons</h2>
                 <p>Buttons are pretty easy to add if you know python pretty well. In order to create buttons we first have to create a buttons class to store them in. We will make a simple confirm buttons class to use incase you need the user needs to make a decision.</p>
+                <CreateWarning title="Interaction Error" content="You may encounter an interaction error from discord whilst creating views, this can be resolved by simply restarting your bot and rerunning your command, if the error persists then it may be a problem with an incompatable library." />
                 <CopyBlock
                     text={buttonsClassExample}
                     language='python'
@@ -158,6 +160,11 @@ export default function Cogs() {
                     codeBlock='false'
                 />
                 <p>Now we can run the command and see the buttons pop up!</p>
+                <center>
+                    <div>
+                        <ReactPlayer url="https://www.youtube.com/watch?v=y3TqSUSOprs" />
+                    </div>
+                </center>
                 <h2>Selects</h2>
                 <p>Selects are like dropdown menus in discord, you are able to select something from the menu to do. They are like buttons but a bit simpilar to make and are good for lists. Creating selects is also pretty similar to buttons, we will create a selects class to house all of our select code in. Then we can call that select inside the command.</p>
                 <CopyBlock
@@ -195,6 +202,12 @@ export default function Cogs() {
                     theme={monokaiSublime}
                     codeBlock='false'
                 />
+                <p></p>
+                <center>
+                    <div>
+                        <ReactPlayer url="https://www.youtube.com/watch?v=VxPndtvB7AE" />
+                    </div>
+                </center>
                 <p>And thats it! We just created buttons and selects!</p>
                 <div className={styles.buttonSwitch}>
                     <Link href="./views">

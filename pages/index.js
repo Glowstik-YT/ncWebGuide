@@ -35,7 +35,9 @@ export default function Home() {
         </Link>
         <center>
           <p className={styles.introFooter}>
+            <Link href="./credits">
               Made with ❤️ by Glowstik_#5127 and The Untraceable#4852 
+            </Link>
           </p>
         </center>
       </div>
