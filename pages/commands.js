@@ -30,6 +30,11 @@ const exampleModGroupCommand = `@help.command()
 async def moderation(ctx : commands.Context):
     await ctx.send("This is the moderation part of a help command")
 `
+const exampleCooldownCommand = `@bot.command()
+@commands.cooldown(1, 5, commands.BucketType.user)
+async def example(ctx: commands.Context):
+    await ctx.send("This is an example command")
+`
 
 export default function Commands() {
     const [open, setOpen] = useState(true);
@@ -224,6 +229,17 @@ export default function Commands() {
                     codeBlock='false'
                 />
                 <p>You can use both ID and Name, just for demonstration I used ID for the example.</p>
+                <h2>Cooldowns</h2>
+                <p>Cooldowns are pretty simple, they make sure your commands are not spammed and make the user wait until the command can be used again. It is very helpful if you have commands that have many working resources that need to be update everytime, cooldowns can make sure you don't get ratelimited or overloaded... if that makes sense. We can use the cooldown decorator and set a simple cooldown.</p>
+                <CopyBlock
+                    text={exampleCooldownCommand}
+                    language='python'
+                    showLineNumbers='true'
+                    wrapLines
+                    theme={monokaiSublime}
+                    codeBlock='false'
+                />
+                <p>Thats a simple cooldown which will be applied to every user and only allow them to run the command every 5 seconds. If they run the command before the cooldown is over, it will invoke an error, check out <Link href="./error-handling"><a className={styles.docLink}><strong>Error Handling</strong></a></Link> for more information on how to set it up.</p>
                 <div className={styles.buttonSwitch}>
                     <Link href="./events">
                         <button className={styles.nextButton}>
