@@ -6,6 +6,7 @@ import CodeStyles from "../styles/CodeBlock.module.css";
 import info from "../styles/Info.module.css";
 import CreateWarning from "./warning";
 import Link from "next/link"
+import { isMobile } from 'react-device-detect';
 
 const commandErrorExample = `@ban.error
 async def ban_error(ctx: commands.Context, error: commands.CommandError):
@@ -33,6 +34,7 @@ const missingPermissionsExample = `elif isinstance(error, commands.MissingPermis
 
 export default function Cogs() {
     return (
+        isMobile ? ( <center><h1>Mobile currently not supported.</h1></center> ) :
         <div>
             <Navbar />
             <Head>

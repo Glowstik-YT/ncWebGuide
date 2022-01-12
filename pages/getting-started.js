@@ -7,6 +7,7 @@ import CreateWarning from "./warning";
 import CodeStyles from "../styles/CodeBlock.module.css";
 import info from "../styles/Info.module.css";
 import ReactPlayer from 'react-player';
+import { isMobile } from 'react-device-detect';
 
 const importsCode = `from nextcord.ext import commands
 import nextcord
@@ -23,6 +24,7 @@ async def ping(ctx : commands.Context):
 
 export default function SettingUp() {
     return (
+        isMobile ? ( <center><h1>Mobile currently not supported.</h1></center> ) :
         <div className={styles.container}>
             <Head>
                 <title>The Unofficial Nextcord Web Guide</title>

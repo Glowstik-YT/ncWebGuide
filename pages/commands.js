@@ -10,6 +10,7 @@ import Head from "next/head";
 import Image from 'next/image'
 import info from "../styles/Info.module.css";
 import ReactPlayer from 'react-player';
+import { isMobile } from 'react-device-detect';
 
 const basicExampleCommand = `@bot.command()
 async def example(ctx):
@@ -39,6 +40,7 @@ async def example(ctx: commands.Context):
 export default function Commands() {
     const [open, setOpen] = useState(true);
     return (
+        isMobile ? ( <center><h1>Mobile currently not supported.</h1></center> ) :
         <div>
             <Head>
                 <title>The Unofficial Nextcord Web Guide</title>

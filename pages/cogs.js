@@ -7,6 +7,7 @@ import info from "../styles/Info.module.css";
 import CreateWarning from "./warning";
 import Link from "next/link"
 import ReactPlayer from 'react-player';
+import { isMobile } from 'react-device-detect';
 
 const loadingCogs = `import os
 
@@ -52,6 +53,7 @@ async def load(ctx, extension):
 
 export default function Cogs() {
     return (
+        isMobile ? ( <center><h1>Mobile currently not supported.</h1></center> ) :
         <div>
             <Navbar />
             <Head>

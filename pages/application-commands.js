@@ -5,6 +5,7 @@ import CodeStyles from "../styles/CodeBlock.module.css";
 import Link from "next/link"
 import CreateWarning from "./warning";
 import ReactPlayer from "react-player";
+import { isMobile } from 'react-device-detect';
 
 // this code is inspired from https://github.com/nextcord/nextcord/blob/master/examples/application_commands/slash_basic.py
 const basicSlashCommand = `from nextcord import Client, Interaction, SlashOption, ChannelType #your going too need to import these new imports for slash commands to work
@@ -69,6 +70,7 @@ async def example3_command(interaction: Interaction, arg1=SlashOption(name="inpu
 
 export default function slashCommands() {
     return (
+        isMobile ? ( <center><h1>Mobile currently not supported.</h1></center> ) :
         <div>
             <Navbar />
             <div className={styles.card}>

@@ -7,6 +7,7 @@ import info from "../styles/Info.module.css";
 import CreateWarning from "./warning";
 import Link from "next/link"
 import ReactPlayer from "react-player";
+import { isMobile } from 'react-device-detect';
 
 const buttonsClassExample = `class ButtonsCheck(nextcord.ui.View): #the nextcord.ui.View is what we will use to create the buttons
     def __init__(self): #this is to initialize the class and set the properties
@@ -89,6 +90,7 @@ async def number(ctx: commands.Context):
 
 export default function Cogs() {
     return (
+        isMobile ? ( <center><h1>Mobile currently not supported.</h1></center> ) :
         <div>
             <Navbar />
             <Head>

@@ -5,9 +5,11 @@ import Head from "next/head";
 import Image from 'next/image'
 import CodeStyles from "../styles/CodeBlock.module.css";
 import ReactPlayer from 'react-player';
+import { isMobile } from 'react-device-detect';
 
 export default function SettingUp() {
     return (
+        isMobile ? ( <center><h1>Mobile currently not supported.</h1></center> ) :
         <div className={styles.container}>
             <Head>
                 <title>The Unofficial Nextcord Web Guide</title>

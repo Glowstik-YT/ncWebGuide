@@ -2,9 +2,11 @@ import styles from '../styles/Home.module.css'
 import Link from "next/link";
 import Head from "next/head";
 import NavBar from "./navbar";
+import { isMobile } from 'react-device-detect';
 
 export default function Home() {
   return (
+    isMobile ? ( <center><h1>Mobile currently not supported.</h1></center> ) :
     <div className={styles.container}>
       <NavBar />
       <Head>

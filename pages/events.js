@@ -6,6 +6,7 @@ import { CopyBlock, monokaiSublime } from "react-code-blocks";
 import React, { useState } from 'react';
 import CreateTip from "./tips";
 import Head from "next/head";
+import { isMobile } from 'react-device-detect';
 
 const onMessageExample = `@bot.event
 async def on_message(message):
@@ -32,6 +33,7 @@ async def on_message(message):
 
 export default function Events() {
     return (
+        isMobile ? ( <center><h1>Mobile currently not supported.</h1></center> ) :
         <div>
             <Head>
                 <title>The Unofficial Nextcord Web Guide</title>

@@ -6,6 +6,7 @@ import { CopyBlock, monokaiSublime } from "react-code-blocks";
 import React, { useState } from 'react';
 import CreateTip from "./tips";
 import Head from "next/head";
+import { isMobile } from 'react-device-detect';
 
 const quest1 = `Question: What is "async" and "await"?
 Answer: "async" is a keyword that allows you to use asynchronous code. "await" is a keyword that allows you to use asynchronous code, it is used in nextcord to do things step by step.
@@ -25,6 +26,7 @@ Answer: You have to enable developer mode in discord, this can be done by going 
 
 export default function FaQ() {
     return (
+        isMobile ? ( <center><h1>Mobile currently not supported.</h1></center> ) :
         <div>
             <Head>
                 <title>The Unofficial Nextcord Web Guide</title>
