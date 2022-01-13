@@ -78,8 +78,8 @@ export default function Commands() {
                     codeBlock='false'
                     />
                 </div>
-                <CreateTip title="Slash Commands" content="Discords message intent is limiting verified bots to not be able to access the message content unless they are provided the intent, if you plan on verifying your bot, you may need to use slash commands or get the intent." />
                 <h3>Advanced Example</h3>
+                
                 <div>
                     <CopyBlock
                     text={advancedExampleCommand}
@@ -90,12 +90,32 @@ export default function Commands() {
                     codeBlock='false'
                     />
                 </div>
+                <CreateTip title="Slash Commands" content="Discords message intent is limiting verified bots to not be able to access the message content unless they are provided the intent, if you plan on verifying your bot, you may need to use slash commands or get the intent." />
                 <h3>Analyzing the Example</h3>
+
                 <p>
                     In the advanced example above, the bot grabs the member argument and then references the Discord API to find the join date of that user, once the join date is found, the bot sends that message to the channel.
                 </p>
                 <h2>Command Groups</h2>
                 <p>Sometimes you may have a command which has other commands branching out of it, for example, help commands are very common with this feature. <code className={CodeStyles.inline}>!help moderation</code> might be one of the commands you need for your bot, and the best way to do this is using command groups.</p>
+                <CopyBlock
+                    text={exampleGroupCommand}
+                    language='python'
+                    showLineNumbers='true'
+                    wrapLines
+                    theme={monokaiSublime}
+                    codeBlock='false'
+                />
+                <p>After you create a group command, you can then add on too the groups easily.</p>
+
+                <CopyBlock
+                    text={exampleModGroupCommand}
+                    language='python'
+                    showLineNumbers='true'
+                    wrapLines
+                    theme={monokaiSublime}
+                    codeBlock='false'
+                />
                 <div className={info.warnCard}>
                     <div>
                         <div className={info.warnTitle}>
@@ -120,24 +140,6 @@ export default function Commands() {
                         </div>
                     </div>
                 </div>
-                <CopyBlock
-                    text={exampleGroupCommand}
-                    language='python'
-                    showLineNumbers='true'
-                    wrapLines
-                    theme={monokaiSublime}
-                    codeBlock='false'
-                />
-                <p>After you create a group command, you can then add on too the groups easily.</p>
-
-                <CopyBlock
-                    text={exampleModGroupCommand}
-                    language='python'
-                    showLineNumbers='true'
-                    wrapLines
-                    theme={monokaiSublime}
-                    codeBlock='false'
-                />
                 <div>
                     <Image src="https://cdn.upload.systems/uploads/048IodDS.png" height="180" width="300"/>
                     <Image src="https://cdn.upload.systems/uploads/tqBWWVvw.png" height="180" width="350"/>

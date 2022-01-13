@@ -43,7 +43,7 @@
 
 @media screen and (max-width: 1770px){
     .tipCard {
-        width: 200px;
+        width: 250px;
         height: wrap;
         background-color: #141414;
         color: #fff;
@@ -124,7 +124,7 @@
 
 @media screen and (max-width: 1770px){
     .warnCard {
-        width: 200px;
+        width: 250px;
         height: wrap;
         background-color: #141414;
         color: #fff;
