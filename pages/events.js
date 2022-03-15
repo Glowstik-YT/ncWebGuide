@@ -81,7 +81,7 @@ export default function Events() {
                 />
                 <p>This simpily will send a message to the new member saying hello and welcoming them to the server.</p>
                 <h2>Listeners</h2>
-                <p>Listeners are very similar to events, although they can be used more than once across multiple files, they are ussually used in <Link href="./cogs"><a className={styles.docLink}><strong>cogs</strong></a></Link>, so you can have multiple listeners for each cog.</p>
+                <p>Listeners are very similar to events, although they can be used more than once across multiple files, they are usually used in <Link href="./cogs"><a className={styles.docLink}><strong>cogs</strong></a></Link>, so you can have multiple listeners for each cog.</p>
                 <CopyBlock
                     text={onMessageListenerExample}
                     language='python'

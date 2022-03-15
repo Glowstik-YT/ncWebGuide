@@ -123,13 +123,19 @@ export default function Cogs() {
                 <p>Its suggested to keep this in your <code className={CodeStyles.inline}>main.py</code> file so you can't disable your disable command...</p>
                 <p>For enabling its pretty much the same thing, but instead of unloading the cog, we will be loading it!</p>
                 <CopyBlock
-                    text={disablingCogs}
+                    text={enablingCogs}
                     language='python'
                     showLineNumbers='true'
                     wrapLines
                     theme={monokaiSublime}
                     codeBlock='false'
                 />
+                <p></p>
+                <center>
+                    <div>
+                        <ReactPlayer url="https://www.youtube.com/watch?v=hoVtbSp-AZ4" />
+                    </div>
+                </center>
                 <div className={styles.buttonSwitch}>
                     <Link href="./events">
                         <button className={styles.nextButton}>

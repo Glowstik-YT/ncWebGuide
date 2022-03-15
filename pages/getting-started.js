@@ -38,12 +38,12 @@ export default function SettingUp() {
                 <h1>Getting Started Part 2</h1>
                 <p>Now that we have python 3.8+ installed and a discord bot created, we can now start the fun portion, CODING!</p>
                 <h3>Installing Required Dependencies</h3>
-                <CreateWarning title="Possible Errors" content="If an error occurs, you may need to update your version of python to the latest version. "/>
+                <CreateWarning title="Possible Errors" content="If an error occurs, you may need to update your version of python to the latest version. (python 3.8 or higer)"/>
                 <p>
                     In order to create a bot with Nextcord, you first need to install Nextcord. To do so, you can use the following command in your terminal:
                 </p>
                 <CopyBlock
-                    text='pip install -U nextcord'
+                    text='python3 -m pip install -U nextcord'
                     language='shell'
                     showLineNumbers='true'
                     wrapLines
@@ -105,7 +105,7 @@ export default function SettingUp() {
                         </div>
                         <div className={info.warnContent}>
                             <p>
-                            This isn't the most secure way to store your token, check out <Link href="./token-storage"><a className={styles.docLink}><strong>Secure Token Storage</strong></a></Link> for more information.
+                            This isn't the most secure way to store your token, check out <Link href="https://github.com/nextcord/nextcord/blob/stable/examples/secure_token_storage.py/"><a className={styles.docLink} target="_blank"><strong>Secure Token Storage</strong></a></Link> for more information.
                             </p>
                         </div>
                     </div>
