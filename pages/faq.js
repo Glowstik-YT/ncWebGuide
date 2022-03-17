@@ -1,4 +1,4 @@
-import styles from "../styles/Events.module.css";
+import styles from "../styles/Faq.module.css";
 import Link from "next/link"
 import NavBar from "./navbar";
 import CodeStyles from "../styles/CodeBlock.module.css";
@@ -26,7 +26,6 @@ Answer: You have to enable developer mode in discord, this can be done by going 
 
 export default function Commands() {
     return (
-        isMobile ? ( <center><h1>Mobile currently not supported.</h1></center> ) :
         <div>
             <Head>
                 <title>The Unofficial Nextcord Web Guide</title>
@@ -36,52 +35,54 @@ export default function Commands() {
                 />
             </Head>
             <NavBar />
-            <div className={styles.commandsCard}>
-                <h1>FaQ</h1>
-                <p>Here are some questions you may have whilst using nextcord and creating your bot.</p>
-                <h3>Question 1</h3>
-                <CopyBlock
-                    text={quest1}
-                    language='shell'
-                    showLineNumbers='true'
-                    wrapLines
-                    theme={monokaiSublime}
-                    codeBlock='false'
-                />
-                <h3>Question 2</h3>
-                <CopyBlock
-                    text={quest2}
-                    language='shell'
-                    showLineNumbers='true'
-                    wrapLines
-                    theme={monokaiSublime}
-                    codeBlock='false'
-                />
-                <h3>Question 3</h3>
-                <CopyBlock
-                    text={quest3}
-                    language='shell'
-                    showLineNumbers='true'
-                    wrapLines
-                    theme={monokaiSublime}
-                    codeBlock='false'
-                />
-                <h3>Question 4</h3>
-                <CopyBlock
-                    text={quest4}
-                    language='shell'
-                    showLineNumbers='true'
-                    wrapLines
-                    theme={monokaiSublime}
-                    codeBlock='false'
-                />
-                <p>Click <Link href="https://nextcord.readthedocs.io/en/latest/faq.html#frequently-asked-questions"><a className={styles.docLink} target="_blank"><strong>Here</strong></a></Link> for more information.</p>
-                <div className={styles.buttonSwitch}>
-                    <Link href="./application-commands">
-                        <button className={styles.backButton}>
-                            Go Back
-                        </button>
-                    </Link>
+            <div className={styles.cardFlex}>
+                <div className={styles.sectionCard}>
+                    <h1>test</h1>
+                    <p>another test to see what it can put in this and such ykykykkykykykykykykyyk also does it wrap ther text olr what lmaiod;ofj lskajflk;dajf;klsjad;lf jl;kjfl;</p>
+                </div>
+                <div className={styles.sectionCard}>
+                    <h1>test</h1>
+                    <p>another test to see what it can put in this and such ykykykkykykykykykykyyk also does it wrap ther text olr what lmaiod;ofj lskajflk;dajf;klsjad;lf jl;kjfl;</p>
+                </div>
+                <div className={styles.sectionCard}>
+                    <h1>test</h1>
+                    <p>another test to see what it can put in this and such ykykykkykykykykykykyyk also does it wrap ther text olr what lmaiod;ofj lskajflk;dajf;klsjad;lf jl;kjfl;</p>
+                </div>
+                <div className={styles.sectionCard}>
+                    <h1>test</h1>
+                    <p>another test to see what it can put in this and such ykykykkykykykykykykyyk also does it wrap ther text olr what lmaiod;ofj lskajflk;dajf;klsjad;lf jl;kjfl;</p>
+                </div>
+                <div className={styles.sectionCard}>
+                    <h1>test</h1>
+                    <p>another test to see what it can put in this and such ykykykkykykykykykykyyk also does it wrap ther text olr what lmaiod;ofj lskajflk;dajf;klsjad;lf jl;kjfl;</p>
+                </div>
+                <div className={styles.sectionCard}>
+                    <h1>test</h1>
+                    <p>another test to see what it can put in this and such ykykykkykykykykykykyyk also does it wrap ther text olr what lmaiod;ofj lskajflk;dajf;klsjad;lf jl;kjfl;</p>
+                </div>
+                <div className={styles.sectionCard}>
+                    <h1>test</h1>
+                    <p>another test to see what it can put in this and such ykykykkykykykykykykyyk also does it wrap ther text olr what lmaiod;ofj lskajflk;dajf;klsjad;lf jl;kjfl;</p>
+                </div>
+                <div className={styles.sectionCard}>
+                    <h1>test</h1>
+                    <p>another test to see what it can put in this and such ykykykkykykykykykykyyk also does it wrap ther text olr what lmaiod;ofj lskajflk;dajf;klsjad;lf jl;kjfl;</p>
+                </div>
+                <div className={styles.sectionCard}>
+                    <h1>test</h1>
+                    <p>another test to see what it can put in this and such ykykykkykykykykykykyyk also does it wrap ther text olr what lmaiod;ofj lskajflk;dajf;klsjad;lf jl;kjfl;</p>
+                </div>
+                <div className={styles.sectionCard}>
+                    <h1>test</h1>
+                    <p>another test to see what it can put in this and such ykykykkykykykykykykyyk also does it wrap ther text olr what lmaiod;ofj lskajflk;dajf;klsjad;lf jl;kjfl;</p>
+                </div>
+                <div className={styles.sectionCard}>
+                    <h1>test</h1>
+                    <p>another test to see what it can put in this and such ykykykkykykykykykykyyk also does it wrap ther text olr what lmaiod;ofj lskajflk;dajf;klsjad;lf jl;kjfl;</p>
+                </div>
+                <div className={styles.sectionCard}>
+                    <h1>test</h1>
+                    <p>another test to see what it can put in this and such ykykykkykykykykykykyyk also does it wrap ther text olr what lmaiod;ofj lskajflk;dajf;klsjad;lf jl;kjfl;</p>
                 </div>
             </div>
 

@@ -59,6 +59,46 @@
     }    
 }
 
+@media screen and (min-width: 40em) {
+    .sectionCard{
+        max-width: calc(50% -  1em);
+    }
+}
+ 
+@media screen and (min-width: 60em) {
+    .sectionCard{
+        max-width: calc(25% - 1em);   
+    }
+}
+
+.sectionCard{
+    width: 350px;
+    height: 300px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+    padding-top: 0.4rem;
+    background-color: #141414;
+    color: #fff;
+    border-radius: 15px;
+    margin-top: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    z-index: 0;
+    transition: ease 0.7s;
+    margin-bottom: 1rem;
+    flex: 1 0 300px;
+    box-sizing: border-box;
+    margin: 1rem .75em;
+}
+
+.cardFlex{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+ 
+
 .buttonSwitch{
     margin-top: 1rem;
 }

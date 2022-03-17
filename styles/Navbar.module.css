@@ -8,6 +8,23 @@
     }
 }
 
+@media screen and (max-width: 600px) {
+    .sideBar {
+        z-index: -1 !important;
+        position: fixed !important;
+        display: none;
+   }
+}
+
+@media screen and (min-width: 600px) {
+    .sideBar {
+        display: block;
+        animation: slideInAnimation ease 2s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+   }
+}
+
 .sideListTitle{
     color: #404EED;
     margin-bottom: -0.17rem;
@@ -27,8 +44,15 @@
     z-index: 0;
     overflow: hidden;
     display: block;
-    position: fixed;
+    position: relative;
+    margin-top: 1rem;
 }
+
+.toggleSideBar {
+    z-index: -1 !important;
+    position: fixed !important;
+    display: none;
+  }
 
 .sideList {
     list-style-type: none; 
