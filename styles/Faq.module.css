@@ -73,7 +73,7 @@
 
 .sectionCard{
     width: 350px;
-    height: 300px;
+    height: wrap;
     padding-left: 1rem;
     padding-right: 1rem;
     padding-bottom: 1rem;
@@ -96,6 +96,8 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    padding-top: 1.5rem;
+    margin-top: 1rem;
 }
  
 

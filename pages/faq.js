@@ -7,6 +7,7 @@ import React, { useState } from 'react';
 import CreateTip from "./tips";
 import Head from "next/head";
 import { isMobile } from 'react-device-detect';
+import Image from 'next/image'
 
 const quest1 = `Question: What is "async" and "await"?
 Answer: "async" is a keyword that allows you to use asynchronous code. "await" is a keyword that allows you to use asynchronous code, it is used in nextcord to do things step by step.
@@ -37,48 +38,11 @@ export default function Commands() {
             <NavBar />
             <div className={styles.cardFlex}>
                 <div className={styles.sectionCard}>
-                    <h1>test</h1>
-                    <p>another test to see what it can put in this and such ykykykkykykykykykykyyk also does it wrap ther text olr what lmaiod;ofj lskajflk;dajf;klsjad;lf jl;kjfl;</p>
-                </div>
-                <div className={styles.sectionCard}>
-                    <h1>test</h1>
-                    <p>another test to see what it can put in this and such ykykykkykykykykykykyyk also does it wrap ther text olr what lmaiod;ofj lskajflk;dajf;klsjad;lf jl;kjfl;</p>
-                </div>
-                <div className={styles.sectionCard}>
-                    <h1>test</h1>
-                    <p>another test to see what it can put in this and such ykykykkykykykykykykyyk also does it wrap ther text olr what lmaiod;ofj lskajflk;dajf;klsjad;lf jl;kjfl;</p>
-                </div>
-                <div className={styles.sectionCard}>
-                    <h1>test</h1>
-                    <p>another test to see what it can put in this and such ykykykkykykykykykykyyk also does it wrap ther text olr what lmaiod;ofj lskajflk;dajf;klsjad;lf jl;kjfl;</p>
-                </div>
-                <div className={styles.sectionCard}>
-                    <h1>test</h1>
-                    <p>another test to see what it can put in this and such ykykykkykykykykykykyyk also does it wrap ther text olr what lmaiod;ofj lskajflk;dajf;klsjad;lf jl;kjfl;</p>
-                </div>
-                <div className={styles.sectionCard}>
-                    <h1>test</h1>
-                    <p>another test to see what it can put in this and such ykykykkykykykykykykyyk also does it wrap ther text olr what lmaiod;ofj lskajflk;dajf;klsjad;lf jl;kjfl;</p>
-                </div>
-                <div className={styles.sectionCard}>
-                    <h1>test</h1>
-                    <p>another test to see what it can put in this and such ykykykkykykykykykykyyk also does it wrap ther text olr what lmaiod;ofj lskajflk;dajf;klsjad;lf jl;kjfl;</p>
-                </div>
-                <div className={styles.sectionCard}>
-                    <h1>test</h1>
-                    <p>another test to see what it can put in this and such ykykykkykykykykykykyyk also does it wrap ther text olr what lmaiod;ofj lskajflk;dajf;klsjad;lf jl;kjfl;</p>
-                </div>
-                <div className={styles.sectionCard}>
-                    <h1>test</h1>
-                    <p>another test to see what it can put in this and such ykykykkykykykykykykyyk also does it wrap ther text olr what lmaiod;ofj lskajflk;dajf;klsjad;lf jl;kjfl;</p>
-                </div>
-                <div className={styles.sectionCard}>
-                    <h1>test</h1>
-                    <p>another test to see what it can put in this and such ykykykkykykykykykykyyk also does it wrap ther text olr what lmaiod;ofj lskajflk;dajf;klsjad;lf jl;kjfl;</p>
-                </div>
-                <div className={styles.sectionCard}>
-                    <h1>test</h1>
-                    <p>another test to see what it can put in this and such ykykykkykykykykykykyyk also does it wrap ther text olr what lmaiod;ofj lskajflk;dajf;klsjad;lf jl;kjfl;</p>
+                    <h1>Embed</h1>
+                    <p>Add <i>style</i> to your messages using embeds! A better way to organize info.</p>
+                    <center>
+                        <Image src="https://media.discordapp.net/attachments/794739330835808261/953857372718264340/embeddd.png?width=1052&height=701" height="170" width="253"/>
+                    </center>
                 </div>
                 <div className={styles.sectionCard}>
                     <h1>test</h1>

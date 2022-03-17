@@ -19,7 +19,7 @@
 @media screen and (min-width: 600px) {
     .sideBar {
         display: block;
-        animation: slideInAnimation ease 2s;
+        animation: slideInAnimation ease 1s;
         animation-iteration-count: 1;
         animation-fill-mode: forwards;
    }
@@ -38,14 +38,13 @@
     background-color: #141414;
     color: #fff;
     transition: ease 0.5s;
-    animation: slideInAnimation ease 2s;
+    animation: slideInAnimation ease 1s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
-    z-index: 0;
+    z-index: 6;
     overflow: hidden;
     display: block;
     position: relative;
-    margin-top: 1rem;
 }
 
 .toggleSideBar {
@@ -67,4 +66,48 @@
 .sepList:hover {
     color: #404EED;
     transition: ease 0.5s;
+}
+
+.sideBtn{
+    background-color: #454d53;
+    border: 3px solid #454d53;
+    border-radius: 7px;
+    height: 3rem;
+    width: stretch;
+    font-size: 19px;
+    padding: 5px;
+    color: #fff;
+    transition: ease 0.7s;
+}
+
+.sideBtn:hover{
+    background-color: #32373b;
+    border: 3px solid #32373b;  
+    transition: ease 0.7s;
+    cursor: pointer;
+}
+
+.sideBtnCircle{
+    width: 6rem;
+    color: #fff;
+    height: 2rem;
+    margin-left: 1.5rem;
+    background-color: #5865F2;
+    border: 3px solid #5865F2;
+    border-radius: 7px;
+    transition: ease 0.7s;
+    position: absolute;
+    z-index: 5;
+}
+
+.sideBtnCircle:hover{
+    width: 6rem;
+    color: #fff;
+    height: 2rem;
+    background-color: #404EED;
+    border: 3px solid #404EED;
+    border-radius: 7px;
+    transition: ease 0.7s;
+    position: absolute;
+    z-index: 5;
 }

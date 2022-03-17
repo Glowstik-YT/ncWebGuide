@@ -39,6 +39,13 @@ export default function FaQ() {
             <div className={styles.commandsCard}>
                 <h1>Thanks!</h1>
                 <p>Huge thanks to everyone who has contributed to not only the creation of this guide but also the creation of nextcord, I would not be able to create this guide without them and they did play a big part in the development of the guide. This guide will be updated regularly but currently (at the time of writing) things may look a bit rushed as I wanted to complete this as fast as possible. I will be going back and fixing any typos or issues I have discovered and this guide will be getting a lot more indepth soon! Lastly, I want to thank you for ig just spending your time to use the guide and I hope it helps you! - <code className={CodeStyles.inline}>Glowstik_</code> </p>
+                <ul>
+                    <li><strong>The Untraceable#4852</strong> helped with writing a couple of the pages :D</li>
+                    <li><strong>Taptaplit#3992</strong> helped with the more dynamic css :P</li>
+                    <li><strong>Glowstik_#5127</strong> just procrastinated on the entire project ._.</li>
+                    <li><strong>Nextcord</strong> is the lib everything is based around, so ty to the devs of that</li>
+                    
+                </ul>
                 <div className={styles.buttonSwitch}>
                     <Link href="/">
                         <button className={styles.nextButton}>

@@ -2,13 +2,14 @@ import styles from '../styles/Navbar.module.css'
 import Link from "next/link";
 import React, {useState} from 'react'
 import { isMobile } from 'react-device-detect';
+import Head from "next/head";
 
 export default function NavBar()  {
     const [mobileNav, setMobileNav] = useState(false);
     return (
         true ? ( 
             <>
-                <button className={styles.navBtn} onClick={() => { setMobileNav(!mobileNav) }} >Click me</button>
+                <button className={styles.sideBtnCircle} onClick={() => { setMobileNav(!mobileNav) }}>Toggle Nav</button>
                 {mobileNav && (
                     <div className={styles.sideBar}>
                         <ul className={styles.sideList}>
@@ -60,11 +61,11 @@ export default function NavBar()  {
                             </li>
                             <li className={styles.sepList}>
                                 <Link href="/faq">
-                                    FaQs
+                                    Popular Topics
                                 </Link>
                             </li>
-
                         </ul>
+                        <button className={styles.sideBtn} onClick={() => { setMobileNav(!mobileNav) }}>Hide Sidebar</button>
                     </div>
                 )}
             </> 
@@ -119,10 +120,9 @@ export default function NavBar()  {
                 </li>
                 <li className={styles.sepList}>
                     <Link href="/faq">
-                        FaQs
+                        Popular Topics
                     </Link>
                 </li>
-
             </ul>
         </div>
     )
