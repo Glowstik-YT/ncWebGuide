@@ -7,6 +7,25 @@
     }
 }
 
+@media screen and (max-width: 1400px) {
+    .tipCard {
+        position: relative !important;
+        width: 95% !important;
+        z-index: 0 !important;
+        margin-left: 1rem !important;
+        background: #1d1d1d !important;
+    }
+    .tipTitle {
+        border-top-left-radius: 10px !important;
+        border-top-right-radius: 10px !important;
+    }
+    .tipContent {
+        border-bottom-left-radius: 10px !important;
+        border-bottom-right-radius: 10px !important;
+        padding-bottom: 0rem !important;
+    }
+}
+
 .tipTitle {
     width: 100;
     background: #32cd32;
@@ -21,6 +40,8 @@
     padding-left: 1rem;
     padding-right: 1rem;
     padding-bottom: 1rem;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
 }
 
 .tipCard {
@@ -28,8 +49,6 @@
     height: wrap;
     background-color: #141414;
     color: #fff;
-    border-radius: 15px;
-    margin-right: 1rem;
     position: absolute;
     z-index: 2;
     top: 50;
@@ -88,10 +107,30 @@
 
 /* Warnings stuff */
 
+@media screen and (max-width: 1400px) {
+    .warnCard {
+        position: relative !important;
+        width: 95% !important;
+        z-index: 0 !important;
+        margin-left: 1rem !important;
+        background: #1d1d1d !important;
+    }
+    .warnTitle {
+        border-top-left-radius: 10px !important;
+        border-top-right-radius: 10px !important;
+    }
+    .warnContent {
+        border-bottom-left-radius: 10px !important;
+        border-bottom-right-radius: 10px !important;
+        padding-bottom: 0rem !important;
+    }
+}
+
+
 .warnTitle {
     width: 100%;
     background: #edba00;
-    padding: 1%;
+    padding: 3px;
     padding-left: 1rem;
     padding-right: 1rem;
     border-top-left-radius: 15px;
@@ -102,6 +141,8 @@
     padding-left: 1rem;
     padding-right: 1rem;
     padding-bottom: 1rem;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
 }
 
 .warnCard {
@@ -109,8 +150,6 @@
     height: wrap;
     background-color: #141414;
     color: #fff;
-    border-radius: 15px;
-    margin-right: 1rem;
     position: absolute;
     z-index: 2;
     top: 50;

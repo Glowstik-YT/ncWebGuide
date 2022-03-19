@@ -24,6 +24,9 @@
     z-index: 1;
     transition: ease 0.7s;
     margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
 @media screen and (max-width: 1350px) {

@@ -10,9 +10,7 @@
 
 @media screen and (max-width: 600px) {
     .sideBar {
-        z-index: -1 !important;
         position: fixed !important;
-        display: none;
    }
 }
 
@@ -110,4 +108,16 @@
     transition: ease 0.7s;
     position: absolute;
     z-index: 5;
+}
+
+.darkOverlay{
+    position: fixed;
+    padding-top: 1rem;
+    z-index: 300;
+    background-color: rgba(1, 1, 1, 0.7);
+    top: 0;
+    left: 0;
+    height: 105%;
+    width: 105%;
+    transition: ease 0.5s;
 }

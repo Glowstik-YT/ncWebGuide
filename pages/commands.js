@@ -79,7 +79,6 @@ export default function Commands() {
                     />
                 </div>
                 <h3>Advanced Example</h3>
-                
                 <div>
                     <CopyBlock
                     text={advancedExampleCommand}
@@ -90,9 +89,9 @@ export default function Commands() {
                     codeBlock='false'
                     />
                 </div>
+                <p></p>
                 <CreateTip title="Slash Commands" content="Discords message intent is limiting verified bots to not be able to access the message content unless they are provided the intent, if you plan on verifying your bot, you may need to use slash commands or get the intent." />
                 <h3>Analyzing the Example</h3>
-
                 <p>
                     In the advanced example above, the bot grabs the member argument and then references the Discord API to find the join date of that user, once the join date is found, the bot sends that message to the channel.
                 </p>
@@ -107,15 +106,6 @@ export default function Commands() {
                     codeBlock='false'
                 />
                 <p>After you create a group command, you can then add on too the groups easily.</p>
-
-                <CopyBlock
-                    text={exampleModGroupCommand}
-                    language='python'
-                    showLineNumbers='true'
-                    wrapLines
-                    theme={monokaiSublime}
-                    codeBlock='false'
-                />
                 <div className={info.warnCard}>
                     <div>
                         <div className={info.warnTitle}>
@@ -140,33 +130,26 @@ export default function Commands() {
                         </div>
                     </div>
                 </div>
+                <CopyBlock
+                    text={exampleModGroupCommand}
+                    language='python'
+                    showLineNumbers='true'
+                    wrapLines
+                    theme={monokaiSublime}
+                    codeBlock='false'
+                />
                 <div>
                     <Image src="https://cdn.upload.systems/uploads/048IodDS.png" height="180" width="300"/>
                     <Image src="https://cdn.upload.systems/uploads/tqBWWVvw.png" height="180" width="350"/>
                 </div>
                 <p>This is a very simple command group/help command, you can use <Link href="./views"><a className={styles.docLink}><strong>Views</strong></a></Link> to make it more complext and better!</p>
                 <p>A more complex help command which we will be making in <Link href="./help-commands"><a className={styles.docLink}><strong>How to make Custom Help Commands</strong></a></Link> would look something like this:</p>
-                <Image src="https://cdn.upload.systems/uploads/OGsLF4yL.png" height="320" width="440"/ >
+                <Image src="https://cdn.upload.systems/uploads/OGsLF4yL.png" height="256" width="215"/>
                 <h2>Command Permissions</h2>
                 <p>Many of the moderation commands if not all should check if the user has the correct permissions to run the command. If a user that just joined the server can ban people, that isnt the <em>greatest</em> look for your bot. Thats why we have <Link href="https://nextcord.readthedocs.io/en/latest/api.html#nextcord.Permissions"><a className={styles.docLink}><strong>Commands.permissions</strong></a></Link>, thats just one of the many permissions we will be working with today!</p>
                 <h3>has_permissions</h3>
                 <p>This is the most popular decorator for checking if a user has permissions, its very simple to use and is perfect for checking peoples permissions.</p>
-                <div className={info.warnCard}>
-                    <div>
-                        <div className={info.warnTitle}>
-                            <h2>
-                                <strong>
-                                    Possible Errors
-                                </strong>
-                            </h2>
-                        </div>
-                        <div className={info.warnContent}>
-                            <p>
-                                If a user who does not have sufficient permissions to run the command runs, the commands decorator will invoke an error. This error is <code className={CodeStyles.inline}>commands.MissingPermissions</code> which is inherited from <code className={CodeStyles.inline}>commands.CheckFailure</code>. In order to resolve this error you will require <Link href="./help-commands"><a className={styles.docLink}><strong>Error Handling.</strong></a></Link>
-                            </p>
-                        </div>
-                    </div>
-                </div>
+                
                 <CopyBlock
                     text={`@commands.has_permissions("manage_guild=True") 
 #This accepts mutliple optional arguments`}
@@ -191,6 +174,7 @@ export default function Commands() {
                 <p>You would put this under your <code className={CodeStyles.inline}>@bot.command</code>.</p>
                 <h3>is_owner</h3>
                 <p>This is mainly used for owner only commands, it's usually used for commands that impact the bot itself, for example if you want to restart the bot. If there are mutliple developers on your bot then it will apply to them all.</p>
+                
                 <CopyBlock
                     text={`@commands.is_owner()`}
                     language='python'
@@ -199,6 +183,22 @@ export default function Commands() {
                     theme={monokaiSublime}
                     codeBlock='false'
                 />
+                <div className={info.warnCard}>
+                    <div>
+                        <div className={info.warnTitle}>
+                            <h2>
+                                <strong>
+                                    Possible Errors
+                                </strong>
+                            </h2>
+                        </div>
+                        <div className={info.warnContent}>
+                            <p>
+                                If a user who does not have sufficient permissions to run the command runs, the commands decorator will invoke an error. This error is <code className={CodeStyles.inline}>commands.MissingPermissions</code> which is inherited from <code className={CodeStyles.inline}>commands.CheckFailure</code>. In order to resolve this error you will require <Link href="./help-commands"><a className={styles.docLink}><strong>Error Handling.</strong></a></Link>
+                            </p>
+                        </div>
+                    </div>
+                </div>
                 <p>The decorator takes in no arguments and is just <em>there</em>.</p>
                 <h3>has_role</h3>
                 <p>This decorator is very similar to <code className={CodeStyles.inline}>@has_permissions</code>, it takes in the argument of a role which can be entered in the form of an ID or Name.</p>

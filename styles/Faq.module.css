@@ -91,6 +91,15 @@
     margin: 1rem .75em;
 }
 
+.sectionCard:hover{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 0px 0px;
+    transition: ease 0.4s;
+    cursor: pointer;
+    border-radius: 9px;
+    background-color: #141414;
+}
+
+
 .cardFlex{
     display: flex;
     flex-wrap: wrap;
@@ -149,4 +158,8 @@
 
 .docLink {
     color: #404EED;
+}
+
+.embedImg{
+    border-radius: 5px;
 }

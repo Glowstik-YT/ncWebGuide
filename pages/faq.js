@@ -37,13 +37,15 @@ export default function Commands() {
             </Head>
             <NavBar />
             <div className={styles.cardFlex}>
-                <div className={styles.sectionCard}>
-                    <h1>Embed</h1>
-                    <p>Add <i>style</i> to your messages using embeds! A better way to organize info.</p>
-                    <center>
-                        <Image src="https://media.discordapp.net/attachments/794739330835808261/953857372718264340/embeddd.png?width=1052&height=701" height="170" width="253"/>
-                    </center>
-                </div>
+                <Link href="/extras/embeds">
+                    <div className={styles.sectionCard}>
+                        <h1>Embed</h1>
+                        <p>Add <i>style</i> to your messages using embeds! A better way to organize info.</p>
+                        <center>
+                            <Image src="https://cdn.discordapp.com/attachments/879962727030861824/954137468708483162/unknown.png" height="178" width="314" className={styles.embedImg}/>
+                        </center>
+                    </div>
+                </Link>
                 <div className={styles.sectionCard}>
                     <h1>test</h1>
                     <p>another test to see what it can put in this and such ykykykkykykykykykykyyk also does it wrap ther text olr what lmaiod;ofj lskajflk;dajf;klsjad;lf jl;kjfl;</p>

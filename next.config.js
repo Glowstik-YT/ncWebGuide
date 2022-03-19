@@ -1,6 +1,6 @@
 module.exports = {
   reactStrictMode: true,
   images: {
-    domains: ['media.giphy.com', 'cdn.upload.systems', 'media.discordapp.net']
+    domains: ['media.giphy.com', 'cdn.upload.systems', 'media.discordapp.net', 'cdn.discordapp.com']
   }
 }
