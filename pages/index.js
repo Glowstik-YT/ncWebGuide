@@ -15,7 +15,7 @@ export default function Home() {
           name="description"
           content="The Unofficial Nextcord Web Guide is a collection of tutorials and guides for Nextcordv2"
         />
-        <meta name="DiscordLinkButtonLabel" content="Nextcord Guide">
+        <meta name="DiscordLinkButtonLabel" content="Nextcord Guide"/>
 
       </Head>
       <div className={styles.introCard}>
